@@ -86,7 +86,31 @@
         <origin xyz="0 0 ${l1}" rpy="0 0 0"/>
     </joint>
     
+    <link name="link2">
+        <collision>
+            <origin xyz="${l1} 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="${l2} ${width} ${width}"/>
+            </geometry>
+        </collision>
 
+        <visual>
+            <origin xyz="${l1} 0 0" rpy="0 0 0"/>
+           <geometry>
+                <box size="${l2} ${width} ${width}"/>
+           </geometry>
+        </visual>
+
+        <inertial>
+            <origin xyz="0 0 ${l1/2}" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia
+                ixx="${mass / 12.0 * (width*width + width*width)}" ixy="0.0" ixz="0.0"
+                iyy="${mass / 12.0 * (width*width + l1*l1)}" iyz="0.0"
+                izz="${mass / 12.0 * (width*width + l1*l1)}"/>
+        </inertial>
+    </link>
+    
   </xacro:macro>
 
 </robot>
