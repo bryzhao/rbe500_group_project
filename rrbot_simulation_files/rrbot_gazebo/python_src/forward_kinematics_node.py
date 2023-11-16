@@ -9,8 +9,8 @@ RBE500 - Fall 2023
 import numpy as np
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32MultiArray
-from geometry_msgs.msg import Pose, Point
+from sensor_msgs.msg import JointState
+from geometry_msgs.msg import PoseStamped
 
 # Globals
 L1 = 1  # link length [m]
@@ -25,36 +25,36 @@ class ComputeForwardKinematics(Node):
 
     def __init__(self):
         super().__init__('forward_kinematics_node')
-        # TODO(BZ): Listen to the gazebo joint topic instead.
 
+        # Gazebo publishes to a JointState message, so we'll have our callback listen to this topic
         self._joint_angle_subscription = self.create_subscription(
-            msg_type=Float32MultiArray, topic='joint_angles', callback=self.listener_callback, qos_profile=10)
+            msg_type=JointState, topic='/joint_states', callback=self.listener_callback, qos_profile=10)
+        self._pose_publisher = self.create_publisher(msg_type=PoseStamped, topic='/end_effector_pose', qos_profile=10)
 
         self.get_logger().info(f"Initializing {self.get_name()}...")
 
-    def listener_callback(self, msg: Float32MultiArray) -> None:
+    def listener_callback(self, msg: JointState) -> None:
         """
         This is the callback that is executed every time we receive a message of Float32MultiArray on the
         joint_angles topic. We simply call the forward kinematics computation and log the result in the callback.
-        :param msg: ROS2 message of type Float32MultiArray
+        :param msg: ROS2 message of type JointState
         :return: None
         """
         # Retrieves a float array of q1, q2, q3
-        assert len(msg.data) == 3, "Needs to accept 3 joint angles only."
+        assert len(msg.position) == 3, "Needs to accept 3 joint angles only."
 
         # We receive the joint angles as a list of 3 floats, in degrees. And then we convert those joint angles to
         # radians for the forward kin method.
-        joint_angles = msg.data
+        joint_angles = msg.position
         joint_angles = [np.deg2rad(angle) for angle in joint_angles]  # Convert to radians for fwd kin method
 
         # Our link lengths are set to 1, 2, 3 meters respectively for L1, L2, L3
-        T_end_effector = self.compute_forward_kinematics(joint_angles=joint_angles, link_lengths=[L1, L2, L3])
+        end_effector_pose = self.compute_forward_kinematics(joint_angles=joint_angles, link_lengths=[L1, L2, L3])
 
-        self.get_logger().info(f"I heard: {msg.data}")
-        self.get_logger().info(f"Homogeneous transform for end effector, given q1 q2 q3:\n {T_end_effector}")
+        self.get_logger().info(f"I heard: {msg}")
+        self.get_logger().info(f"Resulting pose, given q1 q2 q3:\n {end_effector_pose}")
 
-    @staticmethod
-    def compute_forward_kinematics(joint_angles: list, link_lengths: list) -> np.ndarray:
+    def compute_forward_kinematics(self, joint_angles: list, link_lengths: list) -> np.ndarray:
         # TODO(BZ): Pen and paper derivation for group assignment 1 robot.
 
         """
@@ -86,8 +86,12 @@ class ComputeForwardKinematics(Node):
                                     l1 - l2 * np.sin(q2) - l3 * np.cos(q2) * np.sin(q3) - l3 * np.cos(q3) * np.sin(q2)],
 
                                    [0, 0, 0, 1]])
+        
+        resulting_pose = PoseStamped()
+        resulting_pose.pose.position = T_end_effector[:-1, -1]
+        self._pose_publisher.publish(resulting_pose)
 
-        return T_end_effector
+        return resulting_pose
 
 
 def main(args=None):
