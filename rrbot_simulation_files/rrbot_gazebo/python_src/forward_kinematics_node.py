@@ -14,8 +14,8 @@ from geometry_msgs.msg import PoseStamped
 
 # Globals
 L1 = 1  # link length [m]
-L2 = 2  # link length [m]
-L3 = 3  # link length [m]
+L2 = 1  # link length [m]
+L3 = 1  # link length [m]
 
 
 class ComputeForwardKinematics(Node):
@@ -69,23 +69,22 @@ class ComputeForwardKinematics(Node):
         l1, l2, l3 = link_lengths
 
         # Use the A1*A2*A3 matrix derived on paper
-        T_end_effector = np.array([[np.cos(q1) * np.cos(q2) * np.cos(q3) - np.cos(q1) * np.sin(q2) * np.sin(q3),
-                                    - np.cos(q1) * np.cos(q2) * np.sin(q3) - np.cos(q1) * np.cos(q3) * np.sin(q2),
-                                    -np.sin(q1),
-                                    l2 * np.cos(q1) * np.cos(q2) + l3 * np.cos(q1) * np.cos(q2) * np.cos(
-                                        q3) - l3 * np.cos(q1) * np.sin(q2) * np.sin(q3)],
+        T_end_effector = np.array([[np.cos(q1) * np.cos(q2) - np.sin(q1) * np.sin(q2), 
+                                    np.sin(q1) * np.cos(q2) + np.sin(q2) * np.cos(q1),
+                                    0,
+                                    -l2 * np.sin(q1) * np.sin(q2) + l1 * np.cos(q1) + q3 * np.cos(q1) * np.cos(q2)
+                                    ],
 
-                                   [np.cos(q2) * np.cos(q3) * np.sin(q1) - np.sin(q1) * np.sin(q2) * np.sin(q3),
-                                    - np.cos(q2) * np.sin(q1) * np.sin(q3) - np.cos(q3) * np.sin(q1) * np.sin(q2),
-                                    np.cos(q1),
-                                    l2 * np.cos(q2) * np.sin(q1) + l3 * np.cos(q2) * np.cos(q3) * np.sin(
-                                        q1) - l3 * np.sin(q1) * np.sin(q2) * np.sin(q3)],
+                                    [np.sin(q1) * np.cos(q2) + np.sin(q2) * np.cos(q1),
+                                     np.sin(q1) * np.sin(q2) - np.cos(q1) * np.cos(q2),
+                                     0,
+                                     l1 * np.sin(q1) + l2 * np.sin(q1) * np.cos(q2) + l2 * np.sin(q2) * np.cos(q1)
+                                     ],
 
-                                   [- np.cos(q2) * np.sin(q3) - np.cos(q3) * np.sin(q2),
-                                    np.sin(q2) * np.sin(q3) - np.cos(q2) * np.cos(q3), 0,
-                                    l1 - l2 * np.sin(q2) - l3 * np.cos(q2) * np.sin(q3) - l3 * np.cos(q3) * np.sin(q2)],
+                                    [0, 0, -1, l1 - q3],
 
-                                   [0, 0, 0, 1]])
+                                    [0, 0, 0, 1]
+                                    ])
         
         resulting_pose = PoseStamped()
         resulting_pose.pose.position = T_end_effector[:-1, -1]
