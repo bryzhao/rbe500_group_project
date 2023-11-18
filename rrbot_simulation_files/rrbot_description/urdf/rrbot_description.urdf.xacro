@@ -88,14 +88,14 @@
     
     <link name="link2">
         <collision>
-            <origin xyz="${l1} 0 0" rpy="0 0 0"/>
+            <origin xyz="${l2/2} 0 0" rpy="0 0 0"/>
             <geometry>
                 <box size="${l2} ${width} ${width}"/>
             </geometry>
         </collision>
 
         <visual>
-            <origin xyz="${l1} 0 0" rpy="0 0 0"/>
+            <origin xyz="${l2/2} 0 0" rpy="0 0 0"/>
            <geometry>
                 <box size="${l2} ${width} ${width}"/>
            </geometry>
