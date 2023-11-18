@@ -26,6 +26,8 @@ class ComputeInverseKinematics(Node):
     def __init__(self):
         super().__init__('inverse_kinematics_node')
 
+        # NEED TO CHANGE BECAUSE SEPARATE FROM GAZEBO JOINT STATE
+
         self.endEffectorPosition = self.create_service(
             msg_type=JointState, topic='/joint_states', callback=self.listener_callback, qos_profile=10)
         self._pose_service = self.create_service(msg_type=PoseStamped, topic='/end_effector_pose', qos_profile=10)
@@ -47,10 +49,10 @@ class ComputeInverseKinematics(Node):
         find_theta1_beta = np.arctan2((l3*sin_theta2)/(l2 + l3*cos_theta2)) #double-check correct link length assignment
         joint1_angle = find_theta1_phi - find_theta1_beta
 
+        #THIS DEPENDS ON WHERE WORLD COORDINATES ARE DEFINING MY GIVEN END EFFECTOR POSISION IN SPACE. NEED TO DECIDE
         prismatic3_position = l1 - test_end_effector_coordinates[2] #check correct link assignment
 
         computed_joint_angles_positions = [joint1_angle, joint2_angle, prismatic3_position]
-
 
         return computed_joint_angles_positions
 
