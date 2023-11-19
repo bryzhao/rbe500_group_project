@@ -4,13 +4,16 @@
 Bryan Zhao
 Group Assignment 1
 RBE500 - Fall 2023
+
+Note: use a command like this to move the Gazebo arm:
+ > ros2 topic pub --once /forward_position_controller/commands std_msgs/msg/Float64MultiArray "{data: [2.0, 2.0, 0.5]}"
 """
 
 import numpy as np
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, Point
 
 # Globals
 L1 = 1  # link length [m]
@@ -20,7 +23,7 @@ L3 = 1  # link length [m]
 
 class ComputeForwardKinematics(Node):
     """
-    Computes the forward kinematics for a 3-DOF articulating robotic arm, with the transform derived via D-H parameters.
+    Computes the forward kinematics for a 3-DOF SCARA, with the transform derived via D-H parameters.
     """
 
     def __init__(self):
@@ -87,7 +90,9 @@ class ComputeForwardKinematics(Node):
                                     ])
         
         resulting_pose = PoseStamped()
-        resulting_pose.pose.position = T_end_effector[:-1, -1]
+        position = T_end_effector[:-1, -1]
+        position_ros_msg = Point(x=position[0], y=position[1], z=position[2])
+        resulting_pose.pose.position = position_ros_msg
         self._pose_publisher.publish(resulting_pose)
 
         return resulting_pose

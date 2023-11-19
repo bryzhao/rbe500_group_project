@@ -114,7 +114,7 @@
     <joint name="joint2" type="continuous">
         <parent link="link2"/>
         <child link="link3"/>
-        <origin xyz="1 0 ${cyl_height}" rpy="0 0 0"/>
+        <origin xyz="1 0 0" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -131,11 +131,10 @@
            <geometry>
                 <box size="${l3} ${width} ${width}"/>
            </geometry>
-           <material name="red"/>
         </visual>
 
         <inertial>
-            <origin xyz="0 0 ${l3/2}" rpy="0 0 0"/>
+            <origin xyz="${l2/2} 0 0" rpy="0 0 0"/>
             <mass value="${mass}"/>
             <inertia
                 ixx="${mass / 12.0 * (width*width + width*width)}" ixy="0.0" ixz="0.0"
@@ -143,6 +142,42 @@
                 izz="${mass / 12.0 * (width*width + l3*l3)}"/>
         </inertial>
     </link>
+
+    <link name="link4">
+        <collision>
+            <origin xyz="0 0 ${-l4}" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 ${l4}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+           <origin xyz="${l4} 0 ${-l4}" rpy="0 0 0"/>
+           <geometry>
+                <box size="0.1 0.1 ${l4}"/>
+           </geometry>
+           <material name="red"/>
+        </visual>
+
+        <inertial>
+            <origin xyz="${l2/2 + l3} 0 0" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia
+                ixx="${mass / 12.0 * (width*width + width*width)}" ixy="0.0" ixz="0.0"
+                iyy="${mass / 12.0 * (width*width + l4*l4)}" iyz="0.0"
+                izz="${mass / 12.0 * (width*width + l4*l4)}"/>
+        </inertial>
+    </link>
+
+    <joint name="joint3" type="prismatic">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="0.0 0.0 ${l4/2}" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="0" upper="1.0" velocity="0.5"/>
+        <dynamics damping="0.7"/>
+    </joint>
+
 
     
   </xacro:macro>
