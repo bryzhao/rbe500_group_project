@@ -147,14 +147,14 @@
         <collision>
             <origin xyz="0 0 ${-l4}" rpy="0 0 0"/>
             <geometry>
-                <box size="0.1 0.1 ${l4}"/>
+                <box size="${width} ${width} ${l4}"/>
             </geometry>
         </collision>
 
         <visual>
            <origin xyz="${l4} 0 ${-l4}" rpy="0 0 0"/>
            <geometry>
-                <box size="0.1 0.1 ${l4}"/>
+                <box size="${width} ${width} ${l4}"/>
            </geometry>
            <material name="red"/>
         </visual>
