@@ -20,6 +20,8 @@ L1 = 1  # link length [m]
 L2 = 1  # link length [m]
 L3 = 1  # link length [m]
 
+np.set_printoptions(precision=3, suppress=True)
+
 
 class ComputeForwardKinematics(Node):
     """
@@ -49,16 +51,16 @@ class ComputeForwardKinematics(Node):
         # We receive the joint angles as a list of 3 floats, in degrees. And then we convert those joint angles to
         # radians for the forward kin method.
         joint_angles = msg.position
-        joint_angles = [np.deg2rad(angle) for angle in joint_angles]  # Convert to radians for fwd kin method
+        # joint_angles = [np.deg2rad(angle) for angle in joint_angles]  # Convert to radians for fwd kin method
 
         # Our link lengths are set to 1, 2, 3 meters respectively for L1, L2, L3
-        end_effector_pose = self.compute_forward_kinematics(joint_angles=joint_angles, link_lengths=[L1, L2, L3])
+        end_effector_pose: PoseStamped = \
+            self.compute_forward_kinematics(joint_angles=joint_angles, link_lengths=[L1, L2, L3])
 
-        self.get_logger().info(f"I heard: {msg}")
-        self.get_logger().info(f"Resulting pose, given q1 q2 q3:\n {end_effector_pose}")
+        self.get_logger().info(f"Input joint angles: {msg.position}\n "
+                               f"Resulting pose:\n {end_effector_pose.pose.position}")
 
-    def compute_forward_kinematics(self, joint_angles: list, link_lengths: list) -> np.ndarray:
-        # TODO(BZ): Pen and paper derivation for group assignment 1 robot.
+    def compute_forward_kinematics(self, joint_angles: list, link_lengths: list) -> PoseStamped:
 
         """
         Given the joint angles, we plug those joint angles into the A1*A2*A3 matrix that we derived in problem 3.5
@@ -72,23 +74,22 @@ class ComputeForwardKinematics(Node):
         l1, l2, l3 = link_lengths
 
         # Use the A1*A2*A3 matrix derived on paper
-        T_end_effector = np.array([[np.cos(q1) * np.cos(q2) - np.sin(q1) * np.sin(q2), 
-                                    np.sin(q1) * np.cos(q2) + np.sin(q2) * np.cos(q1),
+
+        T_end_effector = np.array([[np.cos(q1) * np.cos(q2) - np.sin(q1) * np.sin(q2),
+                                    np.sin(q2) * np.cos(q1),
                                     0,
-                                    -l2 * np.sin(q1) * np.sin(q2) + l1 * np.cos(q1) + q3 * np.cos(q1) * np.cos(q2)
+                                    l1 * np.cos(q1) + l2*np.cos(q1)*np.cos(q2) - l2*np.sin(q1)*np.sin(q2)
                                     ],
 
                                     [np.sin(q1) * np.cos(q2) + np.sin(q2) * np.cos(q1),
-                                     np.sin(q1) * np.sin(q2) - np.cos(q1) * np.cos(q2),
+                                     np.sin(q1) * np.sin(q2),
                                      0,
-                                     l1 * np.sin(q1) + l2 * np.sin(q1) * np.cos(q2) + l2 * np.sin(q2) * np.cos(q1)
+                                     l1 * np.sin(q1) + l2*np.cos(q1)*np.sin(q2) + l2*np.cos(q2)*np.sin(q1)
                                      ],
-
                                     [0, 0, -1, l1 - q3],
-
                                     [0, 0, 0, 1]
                                     ])
-        
+
         resulting_pose = PoseStamped()
         position = T_end_effector[:-1, -1]
         position_ros_msg = Point(x=position[0], y=position[1], z=position[2])
