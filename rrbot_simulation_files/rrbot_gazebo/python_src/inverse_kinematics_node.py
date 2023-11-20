@@ -53,16 +53,13 @@ class ComputeInverseKinematics(Node):
         # CHECK IF LINK LENGTHS ARE PROPERLY LABELED AND USED IN GAZEBO, LABELED AS a IN DERIVATION (setting as l2 for now)
         cos_theta2 = (r ** 2 - l2 ** 2 - l3 ** 2) / (2 * l3)
         sin_theta2 = np.sqrt(1 - cos_theta2)
-        joint2_angle = np.arctan2(sin_theta2, cos_theta2)
+        joint2_angle = np.rad2deg(np.arctan2(sin_theta2, cos_theta2))
 
-        find_theta1_phi = np.arctan2(test_end_effector_coordinates[1], test_end_effector_coordinates[
-            0])  # replace with coordinate array from ROS or service request input
-        find_theta1_beta = np.arctan2(
-            (l3 * sin_theta2), (l2 + l3 * cos_theta2))  # double-check correct link length assignment
-        joint1_angle = find_theta1_phi - find_theta1_beta
+        find_theta1_phi = np.arctan2(test_end_effector_coordinates[1], test_end_effector_coordinates[0])
+        find_theta1_beta = np.arctan2((l3 * sin_theta2), (l2 + l3 * cos_theta2))
+        joint1_angle = np.rad2deg(find_theta1_phi - find_theta1_beta)
 
-        # THIS DEPENDS ON WHERE WORLD COORDINATES ARE DEFINING MY GIVEN END EFFECTOR POSISION IN SPACE. NEED TO DECIDE
-        prismatic3_position = l1 - test_end_effector_coordinates[2]  # check correct link assignment
+        prismatic3_position = l1 - test_end_effector_coordinates[2]
 
         computed_joint_angles_positions = [joint1_angle, joint2_angle, prismatic3_position]
 
