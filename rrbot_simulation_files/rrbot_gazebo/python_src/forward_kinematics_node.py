@@ -47,11 +47,7 @@ class ComputeForwardKinematics(Node):
         """
         # Retrieves a float array of q1, q2, q3
         assert len(msg.position) == 3, "Needs to accept 3 joint angles only."
-
-        # We receive the joint angles as a list of 3 floats, in degrees. And then we convert those joint angles to
-        # radians for the forward kin method.
         joint_angles = msg.position
-        # joint_angles = [np.deg2rad(angle) for angle in joint_angles]  # Convert to radians for fwd kin method
 
         # Our link lengths are set to 1, 2, 3 meters respectively for L1, L2, L3
         end_effector_pose: PoseStamped = \
@@ -63,8 +59,7 @@ class ComputeForwardKinematics(Node):
     def compute_forward_kinematics(self, joint_angles: list, link_lengths: list) -> PoseStamped:
 
         """
-        Given the joint angles, we plug those joint angles into the A1*A2*A3 matrix that we derived in problem 3.5
-        by hand, with the DH parameters. We assume a link length of 1 per link, as denoted in the global variables
+        We assume a link length of 1 per link, as denoted in the global variables
         above for simplicity and concreteness of the final computation.
         :param joint_angles: Joint angles in radians - q1, q2, q3.
         :param link_lengths: Provided link lengths in meters.
