@@ -47,10 +47,10 @@ class ComputeInverseKinematics(Node):
     @staticmethod
     def compute_inverse_kinematics_callback(test_end_effector_coordinates, link_lengths: list) -> list:
         l1, l2, l3 = link_lengths
-        # pseudo for now until ROS coordinate array setup
 
+        #SEE INVERSE KINEMATICS DERIVATION
         r = np.sqrt(test_end_effector_coordinates[0] ** 2 + test_end_effector_coordinates[1] ** 2)
-        # CHECK IF LINK LENGTHS ARE PROPERLY LABELED AND USED IN GAZEBO, LABELED AS a IN DERIVATION (setting as l2 for now)
+
         cos_theta2 = (r ** 2 - l2 ** 2 - l3 ** 2) / (2 * l3)
         sin_theta2 = np.sqrt(1 - cos_theta2)
         joint2_angle = np.rad2deg(np.arctan2(sin_theta2, cos_theta2))
@@ -59,7 +59,6 @@ class ComputeInverseKinematics(Node):
         find_theta1_beta = np.arctan2((l3 * sin_theta2), (l2 + l3 * cos_theta2))
         joint1_angle = np.rad2deg(find_theta1_phi - find_theta1_beta)
 
-        #THIS NEEDS TO BE CHANGED IF WRONG
         prismatic3_position = l1 - test_end_effector_coordinates[2]
 
         computed_joint_angles_positions = [joint1_angle, joint2_angle, prismatic3_position]
