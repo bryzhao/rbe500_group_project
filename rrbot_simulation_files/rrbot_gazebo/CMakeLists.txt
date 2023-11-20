@@ -8,6 +8,8 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(controller_manager_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
 
 add_executable(publisher src/position_publisher.cpp)
 ament_target_dependencies(publisher rclcpp std_msgs)
@@ -32,12 +34,18 @@ install(DIRECTORY config
 
 add_subdirectory(python_src)
 # Install Python modules
-ament_python_install_package(${PROJECT_NAME})
+# ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
-install(PROGRAMS
-  python_src/forward_kinematics_node.py
-  DESTINATION lib/${PROJECT_NAME}
+#install(PROGRAMS
+#  python_src/forward_kinematics_node.py
+#  python_src/inverse_kinematics_node.py
+#  DESTINATION lib/${PROJECT_NAME}
+#)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+   "srv/IKService.srv"
+    DEPENDENCIES geometry_msgs std_msgs
 )
 
 # Export pkg dependencies
