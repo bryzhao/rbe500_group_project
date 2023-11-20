@@ -1,0 +1,43 @@
+running egg_info
+creating ../build/inv_kinematics/inv_kinematics.egg-info
+writing ../build/inv_kinematics/inv_kinematics.egg-info/PKG-INFO
+writing dependency_links to ../build/inv_kinematics/inv_kinematics.egg-info/dependency_links.txt
+writing entry points to ../build/inv_kinematics/inv_kinematics.egg-info/entry_points.txt
+writing requirements to ../build/inv_kinematics/inv_kinematics.egg-info/requires.txt
+writing top-level names to ../build/inv_kinematics/inv_kinematics.egg-info/top_level.txt
+writing manifest file '../build/inv_kinematics/inv_kinematics.egg-info/SOURCES.txt'
+reading manifest file '../build/inv_kinematics/inv_kinematics.egg-info/SOURCES.txt'
+writing manifest file '../build/inv_kinematics/inv_kinematics.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics
+copying inv_kinematics/__init__.py -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics
+copying inv_kinematics/inverse_kinematics_service.py -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics
+copying inv_kinematics/inverse_kinematics_client.py -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install
+running install_lib
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics
+copying /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics/__init__.py -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics
+copying /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics/inverse_kinematics_service.py -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics
+copying /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/build/lib/inv_kinematics/inverse_kinematics_client.py -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics
+byte-compiling /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics/inverse_kinematics_service.py to inverse_kinematics_service.cpython-310.pyc
+byte-compiling /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics/inverse_kinematics_client.py to inverse_kinematics_client.cpython-310.pyc
+running install_data
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share/ament_index
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share/ament_index/resource_index
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share/ament_index/resource_index/packages
+copying resource/inv_kinematics -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share/ament_index/resource_index/packages
+creating /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share/inv_kinematics
+copying package.xml -> /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/share/inv_kinematics
+running install_egg_info
+Copying ../build/inv_kinematics/inv_kinematics.egg-info to /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/python3.10/site-packages/inv_kinematics-0.0.0-py3.10.egg-info
+running install_scripts
+Installing client script to /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/inv_kinematics
+Installing service script to /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/install/inv_kinematics/lib/inv_kinematics
+writing list of installed files to '/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src/build/inv_kinematics/install.log'

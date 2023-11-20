@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.000223] (-) JobUnselected: {'identifier': 'rrbot_description'}
+[0.000268] (-) JobUnselected: {'identifier': 'rrbot_gazebo'}
+[0.000375] (-) EventReactorShutdown: {}
