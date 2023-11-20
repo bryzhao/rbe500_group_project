@@ -1,0 +1,215 @@
+[0.566s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.566s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f25953ec7f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f25953ec220>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f25953ec220>>)
+[0.618s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.618s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.619s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rutvij/ros2_ws/src/rbe500_group_project'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.619s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extensions ['ignore', 'ignore_ament_install']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'ignore'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'ignore_ament_install'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extensions ['colcon_pkg']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'colcon_pkg'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extensions ['colcon_meta']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'colcon_meta'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extensions ['ros']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'ros'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extensions ['cmake', 'python']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'cmake'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'python'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extensions ['python_setup_py']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files) by extension 'python_setup_py'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extension 'ignore'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extension 'ignore_ament_install'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extensions ['colcon_pkg']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extension 'colcon_pkg'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extensions ['colcon_meta']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extension 'colcon_meta'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extensions ['ros']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_description) by extension 'ros'
+[0.637s] DEBUG:colcon.colcon_core.package_identification:Package 'rrbot_simulation_files/rrbot_description' with type 'ros.ament_cmake' and name 'rrbot_description'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extension 'ignore'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extension 'ignore_ament_install'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extensions ['colcon_pkg']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extension 'colcon_pkg'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extensions ['colcon_meta']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extension 'colcon_meta'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extensions ['ros']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(rrbot_simulation_files/rrbot_gazebo) by extension 'ros'
+[0.639s] DEBUG:colcon.colcon_core.package_identification:Package 'rrbot_simulation_files/rrbot_gazebo' with type 'ros.ament_cmake' and name 'rrbot_gazebo'
+[0.639s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.639s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.639s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.639s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.639s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.688s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/rutvij/ros2_ws/install
+[0.691s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 320 installed packages in /opt/ros/humble
+[0.692s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'cmake_args' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'cmake_target' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'rrbot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.774s] DEBUG:colcon.colcon_core.verb:Building package 'rrbot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description', 'merge_install': False, 'path': '/home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_description', 'symlink_install': False, 'test_result_base': None}
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'rrbot_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.775s] DEBUG:colcon.colcon_core.verb:Building package 'rrbot_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo', 'merge_install': False, 'path': '/home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.776s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.780s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.780s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_description' with build type 'ament_cmake'
+[0.780s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_description'
+[0.790s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.790s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.790s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.800s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake /home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_description -DCMAKE_INSTALL_PREFIX=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description
+[1.965s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake /home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_description -DCMAKE_INSTALL_PREFIX=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description
+[1.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --build /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description -- -j4 -l4
+[2.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --build /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description -- -j4 -l4
+[2.054s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --install /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description
+[2.071s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrbot_description)
+[2.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --install /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_description
+[2.084s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description' for CMake module files
+[2.084s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description' for CMake config files
+[2.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrbot_description', 'cmake_prefix_path')
+[2.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/hook/cmake_prefix_path.ps1'
+[2.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/hook/cmake_prefix_path.dsv'
+[2.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/hook/cmake_prefix_path.sh'
+[2.088s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/bin'
+[2.088s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/lib/pkgconfig/rrbot_description.pc'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/lib/python3.10/site-packages'
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/bin'
+[2.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.ps1'
+[2.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.dsv'
+[2.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.sh'
+[2.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.bash'
+[2.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.zsh'
+[2.095s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/colcon-core/packages/rrbot_description)
+[2.127s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrbot_description)
+[2.130s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description' for CMake module files
+[2.131s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description' for CMake config files
+[2.131s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrbot_description', 'cmake_prefix_path')
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/hook/cmake_prefix_path.ps1'
+[2.134s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/hook/cmake_prefix_path.dsv'
+[2.134s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/hook/cmake_prefix_path.sh'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/bin'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/lib/pkgconfig/rrbot_description.pc'
+[2.135s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/lib/python3.10/site-packages'
+[2.135s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/bin'
+[2.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.ps1'
+[2.137s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.dsv'
+[2.137s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.sh'
+[2.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.bash'
+[2.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.zsh'
+[2.138s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/colcon-core/packages/rrbot_description)
+[2.139s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo' with build type 'ament_cmake'
+[2.139s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo'
+[2.140s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.140s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.151s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo': AMENT_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake /home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo -DCMAKE_INSTALL_PREFIX=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo
+[5.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo' returned '0': AMENT_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake /home/rutvij/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo -DCMAKE_INSTALL_PREFIX=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo
+[5.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo': AMENT_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --build /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo -- -j4 -l4
+[12.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo' returned '0': AMENT_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --build /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo -- -j4 -l4
+[12.869s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo': AMENT_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --install /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo
+[12.968s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrbot_gazebo)
+[12.970s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo' for CMake module files
+[12.971s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo' returned '0': AMENT_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_description:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/rkd_hw3:/home/rutvij/ros2_ws/install/quat_to_euler:/home/rutvij/ros2_ws/install/my_robot_controller:/home/rutvij/ros2_ws/install/RBE500_HW1_RD:/opt/ros/humble /usr/bin/cmake --install /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo
+[12.972s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo' for CMake config files
+[12.972s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrbot_gazebo', 'cmake_prefix_path')
+[12.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/cmake_prefix_path.ps1'
+[12.974s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/cmake_prefix_path.dsv'
+[12.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/cmake_prefix_path.sh'
+[12.975s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib'
+[12.975s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrbot_gazebo', 'ld_library_path_lib')
+[12.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/ld_library_path_lib.ps1'
+[12.977s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/ld_library_path_lib.dsv'
+[12.977s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/ld_library_path_lib.sh'
+[12.977s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/bin'
+[12.977s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/pkgconfig/rrbot_gazebo.pc'
+[12.978s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/python3.10/site-packages'
+[12.978s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/bin'
+[12.979s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.ps1'
+[12.980s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.dsv'
+[12.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.sh'
+[12.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.bash'
+[12.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.zsh'
+[12.981s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/colcon-core/packages/rrbot_gazebo)
+[13.076s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrbot_gazebo)
+[13.079s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo' for CMake module files
+[13.080s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo' for CMake config files
+[13.081s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrbot_gazebo', 'cmake_prefix_path')
+[13.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/cmake_prefix_path.ps1'
+[13.084s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/cmake_prefix_path.dsv'
+[13.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/cmake_prefix_path.sh'
+[13.085s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib'
+[13.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrbot_gazebo', 'ld_library_path_lib')
+[13.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/ld_library_path_lib.ps1'
+[13.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/ld_library_path_lib.dsv'
+[13.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/hook/ld_library_path_lib.sh'
+[13.087s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/bin'
+[13.087s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/pkgconfig/rrbot_gazebo.pc'
+[13.088s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/python3.10/site-packages'
+[13.088s] Level 1:colcon.colcon_core.environment:checking '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/bin'
+[13.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.ps1'
+[13.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.dsv'
+[13.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.sh'
+[13.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.bash'
+[13.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.zsh'
+[13.091s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/colcon-core/packages/rrbot_gazebo)
+[13.092s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.092s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.092s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.092s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.100s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.100s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.100s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.123s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.125s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/local_setup.ps1'
+[13.128s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rutvij/ros2_ws/src/rbe500_group_project/install/_local_setup_util_ps1.py'
+[13.130s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/setup.ps1'
+[13.133s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/local_setup.sh'
+[13.134s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rutvij/ros2_ws/src/rbe500_group_project/install/_local_setup_util_sh.py'
+[13.134s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/setup.sh'
+[13.137s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/local_setup.bash'
+[13.138s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/setup.bash'
+[13.141s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/local_setup.zsh'
+[13.142s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rutvij/ros2_ws/src/rbe500_group_project/install/setup.zsh'

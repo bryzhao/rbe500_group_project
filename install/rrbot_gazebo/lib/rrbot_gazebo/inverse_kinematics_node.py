@@ -59,7 +59,6 @@ class ComputeInverseKinematics(Node):
         find_theta1_beta = np.arctan2((l3 * sin_theta2), (l2 + l3 * cos_theta2))
         joint1_angle = np.rad2deg(find_theta1_phi - find_theta1_beta)
 
-        #THIS NEEDS TO BE CHANGED IF WRONG
         prismatic3_position = l1 - test_end_effector_coordinates[2]
 
         computed_joint_angles_positions = [joint1_angle, joint2_angle, prismatic3_position]
