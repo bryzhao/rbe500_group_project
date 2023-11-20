@@ -33,11 +33,11 @@ class ComputeInverseKinematics(Node):
 
         # Convert ROS message formats into lists so we can pass the inputs to our IK function
         input_pose = [request.input_x, request.input_y, request.input_z]
-        # joint_angles = self.compute_inverse_kinematics_callback(input_pose, [L1, L2, L3])
 
-        # self.get_logger().info(f"Joint angles computed: {joint_angles}")
-        # response = IKService.Response()
-        joint_angles = [0.0, 0.1, 0.2]
+        joint_angles = self.compute_inverse_kinematics_callback(input_pose, [L1, L2, L3])
+
+        self.get_logger().info(f"Joint angles computed: {joint_angles}")
+
         response.joint_x = joint_angles[0]
         response.joint_y = joint_angles[1]
         response.joint_z = joint_angles[2]
@@ -58,7 +58,7 @@ class ComputeInverseKinematics(Node):
         find_theta1_phi = np.arctan2(test_end_effector_coordinates[1], test_end_effector_coordinates[
             0])  # replace with coordinate array from ROS or service request input
         find_theta1_beta = np.arctan2(
-            (l3 * sin_theta2) / (l2 + l3 * cos_theta2))  # double-check correct link length assignment
+            (l3 * sin_theta2), (l2 + l3 * cos_theta2))  # double-check correct link length assignment
         joint1_angle = find_theta1_phi - find_theta1_beta
 
         # THIS DEPENDS ON WHERE WORLD COORDINATES ARE DEFINING MY GIVEN END EFFECTOR POSISION IN SPACE. NEED TO DECIDE
