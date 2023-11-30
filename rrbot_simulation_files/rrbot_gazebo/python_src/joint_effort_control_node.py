@@ -25,9 +25,9 @@ Kd3 = 1.0
 np.set_printoptions(precision=3, suppress=True)
 
 
-class ComputeForwardKinematics(Node):
+class PDController(Node):
     """
-    Computes the forward kinematics for a 3-DOF SCARA, with the transform derived via D-H parameters.
+    Simple PD effort controller for controlling our SCARA robot in Gazebo.
     """
 
     def __init__(self):
@@ -94,11 +94,11 @@ class ComputeForwardKinematics(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    fwd_kin_node = ComputeForwardKinematics()
-    rclpy.spin(fwd_kin_node)
+    control_node = PDController()
+    rclpy.spin(control_node)
 
     # Enable graceful shutdown.
-    fwd_kin_node.destroy_node()
+    control_node.destroy_node()
     rclpy.shutdown()
 
 
