@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000709] (-) JobUnselected: {'identifier': 'rrbot_description'}
+[0.000791] (rrbot_gazebo) JobQueued: {'identifier': 'rrbot_gazebo', 'dependencies': OrderedDict([('rrbot_description', '/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/install/rrbot_description')])}
+[0.000812] (rrbot_gazebo) JobStarted: {'identifier': 'rrbot_gazebo'}
+[0.011078] (rrbot_gazebo) JobEnded: {'identifier': 'rrbot_gazebo', 'rc': 1}
+[0.021476] (-) EventReactorShutdown: {}

@@ -1,0 +1,170 @@
+[0.006s] Invoking command in '/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo': AMENT_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:/opt/ros/humble /usr/bin/cmake --build /home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo -- -j8 -l8
+[0.046s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.163s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.174s] -- Found rclpy: 3.3.9 (/opt/ros/humble/share/rclpy/cmake)
+[0.174s] -- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)
+[0.206s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.208s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.215s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.228s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.256s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.306s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.310s] -- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.409s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.536s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.569s] -- Found controller_manager_msgs: 2.30.0 (/opt/ros/humble/share/controller_manager_msgs/cmake)
+[0.615s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.867s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.201s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.327s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.346s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.372s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.373s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.373s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.414s] -- Configuring done
+[1.460s] -- Generating done
+[1.462s] -- Build files have been written to: /home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo
+[1.489s] [35m[1mConsolidate compiler generated dependencies of target switch[0m
+[1.490s] [35m[1mConsolidate compiler generated dependencies of target publisher[0m
+[1.490s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_generator_c[0m
+[1.505s] [  2%] Built target rrbot_gazebo__cpp
+[1.514s] [ 17%] Built target rrbot_gazebo__rosidl_generator_c
+[1.515s] [ 17%] Built target switch
+[1.519s] [ 22%] Built target publisher
+[1.522s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_cpp[0m
+[1.524s] [ 22%] Built target ament_cmake_python_symlink_rrbot_gazebo
+[1.526s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_introspection_cpp[0m
+[1.530s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_fastrtps_cpp[0m
+[1.538s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_fastrtps_c[0m
+[1.538s] [ 31%] Built target rrbot_gazebo__rosidl_typesupport_cpp
+[1.541s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_c[0m
+[1.546s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_introspection_c[0m
+[1.547s] [ 40%] Built target rrbot_gazebo__rosidl_typesupport_introspection_cpp
+[1.553s] [ 48%] Built target rrbot_gazebo__rosidl_typesupport_fastrtps_cpp
+[1.556s] [ 57%] Built target rrbot_gazebo__rosidl_typesupport_c
+[1.560s] [ 65%] Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c
+[1.560s] [ 74%] Built target rrbot_gazebo__rosidl_typesupport_introspection_c
+[1.583s] [ 74%] Built target rrbot_gazebo
+[1.605s] [ 77%] Built target rrbot_gazebo__py
+[1.617s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_generator_py[0m
+[1.637s] [ 82%] Built target rrbot_gazebo__rosidl_generator_py
+[1.654s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_c__pyext[0m
+[1.654s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.654s] [35m[1mConsolidate compiler generated dependencies of target rrbot_gazebo__rosidl_typesupport_introspection_c__pyext[0m
+[1.668s] [ 88%] Built target rrbot_gazebo__rosidl_typesupport_c__pyext
+[1.669s] [100%] Built target rrbot_gazebo__rosidl_typesupport_introspection_c__pyext
+[1.669s] [100%] Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext
+[1.762s] running egg_info
+[1.763s] writing rrbot_gazebo.egg-info/PKG-INFO
+[1.763s] writing dependency_links to rrbot_gazebo.egg-info/dependency_links.txt
+[1.763s] writing top-level names to rrbot_gazebo.egg-info/top_level.txt
+[1.767s] reading manifest file 'rrbot_gazebo.egg-info/SOURCES.txt'
+[1.767s] writing manifest file 'rrbot_gazebo.egg-info/SOURCES.txt'
+[1.801s] [100%] Built target ament_cmake_python_build_rrbot_gazebo_egg
+[1.812s] Invoked command in '/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo' returned '0': AMENT_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:/opt/ros/humble /usr/bin/cmake --build /home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo -- -j8 -l8
+[1.866s] Invoking command in '/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo': AMENT_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:/opt/ros/humble /usr/bin/cmake --install /home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo
+[1.873s] -- Install configuration: ""
+[1.874s] -- Execute custom install script
+[1.874s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/rrbot_gazebo/publisher
+[1.874s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/rrbot_gazebo/switch
+[1.874s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/launch/rrbot_world.launch.py
+[1.874s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/worlds/rrbot.world
+[1.874s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/config/controllers.yaml
+[1.875s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/config/gazebo_controllers.yaml
+[1.875s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/rrbot_gazebo/forward_kinematics_node.py
+[1.875s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/rrbot_gazebo/inverse_kinematics_node.py
+[1.875s] -- Symlinking: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/rrbot_gazebo/joint_pd_control_node.py
+[1.886s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/ament_index/resource_index/rosidl_interfaces/rrbot_gazebo
+[1.886s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_generator_c__visibility_control.h
+[1.886s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__functions.h
+[1.886s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__struct.h
+[1.886s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__type_support.h
+[1.886s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/ik_service.h
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/library_path.sh
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/library_path.dsv
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_fastrtps_c.h
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__builder.hpp
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__struct.hpp
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__traits.hpp
+[1.887s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/ik_service.hpp
+[1.888s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.888s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_fastrtps_cpp.hpp
+[1.888s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.888s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_introspection_c.h
+[1.888s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_introspection_cpp.hpp
+[1.889s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/pythonpath.sh
+[1.889s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/pythonpath.dsv
+[1.889s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/PKG-INFO
+[1.890s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/SOURCES.txt
+[1.890s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/dependency_links.txt
+[1.890s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/top_level.txt
+[1.890s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/__init__.py
+[1.890s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_c.c
+[1.890s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.891s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_introspection_c.c
+[1.891s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/__init__.py
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_ik_service.py
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_ik_service_s.c
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.892s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService.idl
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService.srv
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService_Request.msg
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService_Response.msg
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/ament_index/resource_index/package_run_dependencies/rrbot_gazebo
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/ament_index/resource_index/parent_prefix_path/rrbot_gazebo
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/ament_prefix_path.sh
+[1.893s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/ament_prefix_path.dsv
+[1.894s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/path.sh
+[1.894s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/environment/path.dsv
+[1.894s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.bash
+[1.894s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.sh
+[1.894s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.zsh
+[1.894s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.dsv
+[1.894s] -- Symlinking: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.dsv
+[1.910s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/ament_index/resource_index/packages/rrbot_gazebo
+[1.910s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rosidl_cmake-extras.cmake
+[1.910s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.910s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_libraries-extras.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_targets-extras.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazeboConfig.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazeboConfig-version.cmake
+[1.911s] -- Up-to-date symlink: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/package.xml
+[1.911s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_generator_c.so
+[1.912s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_fastrtps_c.so
+[1.912s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_fastrtps_cpp.so
+[1.912s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_introspection_c.so
+[1.912s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_c.so
+[1.912s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_introspection_cpp.so
+[1.913s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_cpp.so
+[1.940s] Listing '/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo'...
+[1.940s] Compiling '/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/__init__.py'...
+[1.940s] Listing '/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv'...
+[1.944s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_generator_py.so
+[1.944s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_cExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_cExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_cppExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cppExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cppExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cppExport-noconfig.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_pyExport.cmake
+[1.945s] -- Up-to-date: /home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_pyExport-noconfig.cmake
+[1.949s] Invoked command in '/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo' returned '0': AMENT_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description:/opt/ros/humble /usr/bin/cmake --install /home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo
