@@ -20,12 +20,12 @@ from sensor_msgs.msg import JointState
 from rrbot_gazebo.srv import ControlInput
 
 # Globals / tunable gains
-Kp1 = 5.0
-Kp2 = 5.0
+Kp1 = 15.0
+Kp2 = 15.0
 Kp3 = 5.0
-Kd1 = 10.0
-Kd2 = 10.0
-Kd3 = 10.0
+Kd1 = 50.0
+Kd2 = 50.0
+Kd3 = 50.0
 
 np.set_printoptions(precision=3, suppress=True)
 
