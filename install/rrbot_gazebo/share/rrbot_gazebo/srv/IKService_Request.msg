@@ -1,4 +1,1 @@
-# Request
-float32 input_x
-float32 input_y
-float32 input_z
+/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo/rosidl_cmake/srv/IKService_Request.msg

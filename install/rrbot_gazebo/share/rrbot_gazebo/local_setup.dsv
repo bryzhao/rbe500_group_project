@@ -1,4 +1,1 @@
-source;share/rrbot_gazebo/environment/ament_prefix_path.sh
-source;share/rrbot_gazebo/environment/library_path.sh
-source;share/rrbot_gazebo/environment/path.sh
-source;share/rrbot_gazebo/environment/pythonpath.sh
+/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo/ament_cmake_environment_hooks/local_setup.dsv

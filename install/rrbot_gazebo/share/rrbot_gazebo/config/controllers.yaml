@@ -1,11 +1,1 @@
-controller_names:
-  - joint_trajectory_controller
-
-joint_trajectory_controller:
-  action_ns: follow_joint_trajectory
-  type: FollowJointTrajectory
-  default: true
-  joints:
-    - joint1
-    - joint2
-    - joint3
+/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/config/controllers.yaml

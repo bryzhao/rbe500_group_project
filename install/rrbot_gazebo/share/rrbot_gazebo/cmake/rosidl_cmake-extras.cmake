@@ -1,4 +1,1 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(rrbot_gazebo_IDL_FILES "srv/IKService.idl")
-set(rrbot_gazebo_INTERFACE_FILES "srv/IKService.srv;srv/IKService_Request.msg;srv/IKService_Response.msg")
+/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo/rosidl_cmake/rosidl_cmake-extras.cmake

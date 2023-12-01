@@ -1,8 +1,8 @@
-# Install script for directory: /home/rutvij/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo/rrbot_gazebo__py
+# Install script for directory: /home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_gazebo/rrbot_gazebo__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rutvij/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo")
+  set(CMAKE_INSTALL_PREFIX "/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_gazebo")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
