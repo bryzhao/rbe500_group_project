@@ -6,6 +6,9 @@ RBE500 - Fall 2023
 
 Note: use a command like this to test our effort controller (by suppling reference joint positions):
  > ros2 topic pub --once /position_inputs std_msgs/msg/Float64MultiArray "{data: [1.0, 1.0, 0.5]}"
+ > ros2 topic pub /forward_effort_controller/commands std_msgs/msg/Float64MultiArray "{data: [10.0, 10.0, 20.5]}"
+
+ > ros2 service call /joint_input_service rrbot_gazebo/srv/ControlInput "{input_q1: 1.0, input_q2: 2.0, input_q3: 3.0}"
 """
 
 import numpy as np
@@ -14,13 +17,15 @@ from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 from sensor_msgs.msg import JointState
 
+from rrbot_gazebo.srv import ControlInput
+
 # Globals / tunable gains
 Kp1 = 5.0
 Kp2 = 5.0
 Kp3 = 5.0
-Kd1 = 1.0
-Kd2 = 1.0
-Kd3 = 1.0
+Kd1 = 10.0
+Kd2 = 10.0
+Kd3 = 10.0
 
 np.set_printoptions(precision=3, suppress=True)
 
@@ -31,15 +36,14 @@ class PDController(Node):
     """
 
     def __init__(self):
-        super().__init__('forward_kinematics_node')
+        super().__init__('joint_effort_control_node')
 
         # Gazebo publishes to a JointState message, so we'll have our callback listen to this topic
         self._joint_state_subscription = self.create_subscription(
             msg_type=JointState, topic='/joint_states', callback=self.listener_callback, qos_profile=10)
-        
-        self._position_input_subscription = self.create_subscription(
-            msg_type=Float64MultiArray, topic='/position_inputs', callback=self.position_input_callback, qos_profile=10)
-        
+        self._joint_input_service = self.create_service(srv_type=ControlInput,
+                                                        callback=self._joint_input_service_callback,
+                                                        srv_name="joint_input_service")
         self._forward_effort_publisher = self.create_publisher(msg_type=Float64MultiArray, 
                                                                topic='/forward_effort_controller/commands', 
                                                                qos_profile=10)
@@ -50,14 +54,17 @@ class PDController(Node):
         
         self.get_logger().info(f"Initializing {self.get_name()} node...")
 
-    def position_input_callback(self, msg: Float64MultiArray):
-        """Takes in reference joint positions for the controller."""
+    def _joint_input_service_callback(self, request, response):
 
-        self.get_logger().info(f"Input reference positions: {msg.data}. Storing these internally...")
+        self.get_logger().info(f"Input reference positions: {request}. Storing these internally...")
 
-        self._q1_reference = msg.data[0]
-        self._q2_reference = msg.data[1]
-        self._q3_reference = msg.data[2]
+        self._q1_reference = request.input_q1
+        self._q2_reference = request.input_q2
+        self._q3_reference = request.input_q3
+
+        # # Return a successful status, if we've received the service call
+        response.status = True
+        return response
 
     def listener_callback(self, msg: JointState) -> None:
         """
@@ -67,7 +74,8 @@ class PDController(Node):
         :return: None
         """
         # Retrieves a float array of q1, q2, q3
-        assert len(msg.position) == 3, "Needs to accept 3 joint angles only."
+        if len(msg.position) != 3:
+            print("[WARNING] Callback needs to accept 3 joint angles only.")
 
         # We receive the joint angles as a list of 3 floats, in degrees. And then we convert those joint angles to
         # radians for the forward kin method.
