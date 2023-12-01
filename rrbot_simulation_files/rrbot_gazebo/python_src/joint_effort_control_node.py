@@ -21,11 +21,11 @@ from rrbot_gazebo.srv import ControlInput
 
 # Globals / tunable gains
 Kp1 = 15.0
-Kp2 = 15.0
-Kp3 = 5.0
-Kd1 = 50.0
-Kd2 = 50.0
-Kd3 = 50.0
+Kp2 = 20.0
+Kp3 = 50.0
+Kd1 = 18.5
+Kd2 = 11.0
+Kd3 = 5.0
 
 np.set_printoptions(precision=3, suppress=True)
 
