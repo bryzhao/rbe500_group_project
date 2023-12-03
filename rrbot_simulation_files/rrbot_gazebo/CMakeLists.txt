@@ -46,6 +46,8 @@ add_subdirectory(python_src)
 rosidl_generate_interfaces(${PROJECT_NAME}
    "srv/IKService.srv"
    "srv/ControlInput.srv"
+   "srv/CartesianVelocityInput.srv"
+   "srv/JointVelocityInput.srv"
     DEPENDENCIES geometry_msgs std_msgs
 )
 
