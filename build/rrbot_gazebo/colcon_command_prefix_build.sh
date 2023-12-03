@@ -1,2 +1,2 @@
 # generated from colcon_core/shell/template/command_prefix.sh.em
-. "/home/joshfarina/ros2_ws/src/rbe500_group_project/install/rrbot_description/share/rrbot_description/package.sh"
+. "/home/rutvij/rbe500_group_project-1/install/rrbot_description/share/rrbot_description/package.sh"

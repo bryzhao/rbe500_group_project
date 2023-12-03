@@ -1,1 +1,3 @@
-/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_description/ament_cmake_environment_hooks/local_setup.dsv
+source;share/rrbot_description/environment/ament_prefix_path.sh
+source;share/rrbot_description/environment/path.sh
+source;share/rrbot_description/environment/rrbot_description.dsv

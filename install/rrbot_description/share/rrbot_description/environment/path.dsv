@@ -1,1 +1,1 @@
-/home/joshfarina/ros2_ws/src/rbe500_group_project/build/rrbot_description/ament_cmake_environment_hooks/path.dsv
+prepend-non-duplicate-if-exists;PATH;bin
