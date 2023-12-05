@@ -25,15 +25,15 @@ from sensor_msgs.msg import JointState
 
 from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 
-# Globals / tunable gains for PD controller
-Kp1 = 15.0
-Kd1 = 18.5
+# Globals / tunable gains for PI controller
+Kp1 = 5.0
+Ki1 = 0
 
-Kp2 = 20.0
-Kd2 = 11.0
+Kp2 = 5.0
+Ki2 = 0
 
-Kp3 = 50.0
-Kd3 = 5.0
+Kp3 = 5.0
+Ki3 = 0
 
 np.set_printoptions(precision=3, suppress=True)
 
@@ -68,18 +68,34 @@ class JointVelocityController(Node):
         self._last_q2_dot = 0.0
         self._last_q3_dot = 0.0
 
+        self.e1_integral = 0.0
+        self.e2_integral = 0.0
+        self.e3_integral = 0.0
+
         self.get_logger().info(f"Initializing {self.get_name()} node...")
 
     def _compute_jacobian_from_joint_positions(self, joint_positions) -> list:
-        """Implement here."""
+        """Derived SCARA 3DOF Jacobian. Implement here."""
+        #Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
+        """jacobian = np.array([[r_11, r_12, r_13],
+                      [r_21, r_22, r_23],
+                      [r_31, r_32, r_33],
+                      [r_41, r_42, r_43],
+                      [r_51, r_52, r_53],
+                      [r_61, r_62, r_63]])"""
+
+        #jacobian = computed_above
         raise NotImplementedError
 
     def compute_joint_velocities_from_cart_velocity(self, cartesian_velocities) -> list:
-        """Implement here."""
+        """Implement Pseudoinverse Jacobian."""
+        #computed_joint_velocities = np.linalg.pinv(self.jacobian) @ cartesian_velocities
+        """need to add angular velocity component to cartesian_velocities. matrix is only 3x1 needs to be 6x1
+        #would like some help here on how to find angular velocites per joint"""
         raise NotImplementedError
 
     def _joint_vel_serv_callback(self, request: JointVelocityInput.Request, response):
-        """If we receive a joint velocity service request, set our reference values directly."""
+        """If we receive a joint velocity service request, set our reference values directly.Used for testing controller performance (transient response)"""
         self.get_logger().info(f"Request received: {request}.")
 
         self._q1_dot_reference = request.input_q1_dot
@@ -122,37 +138,35 @@ class JointVelocityController(Node):
 
         # Parse out joint angles and velocities
         joint_angles = msg.position
-        J = self._compute_jacobian_from_joint_positions(joint_angles)
+        jacobian = self._compute_jacobian_from_joint_positions(joint_angles)
 
         joint_velocities = msg.velocity
         e1 = self._q1_dot_reference - joint_velocities[0]
         e2 = self._q2_dot_reference - joint_velocities[1]
         e3 = self._q3_dot_reference - joint_velocities[2]
 
-        # Now, for our acceleration errors, our input reference velocity is 0, since we want the robot to stop at our
-        # target velocity.
         dt = 0.01  # 100 [Hz] for cycle time in simulation
-        input_joint_accel_reference = 0.0
 
-        measured_q1_dot = (joint_velocities[0] - self._last_q1_dot) / dt
-        measured_q2_dot = (joint_velocities[1] - self._last_q2_dot) / dt
-        measured_q3_dot = (joint_velocities[2] - self._last_q3_dot) / dt
+        #sums error every time step, Might enable integral windup
+        self.e1_integral += e1 * dt
+        self.e2_integral += e2 * dt
+        self.e3_integral += e3 * dt
 
-        e1_dot = input_joint_accel_reference - measured_q1_dot
-        e2_dot = input_joint_accel_reference - measured_q2_dot
-        e3_dot = input_joint_accel_reference - measured_q3_dot
+        #With leaky integrator: lowers integral at a constant rate to prevent integral windup
+        """
+        leak_constant = 0.08
+        self.e1_integral = self.e1_integral * leak_constant + e1 * dt
+        self.e2_integral = self.e2_integral * leak_constant + e2 * dt
+        self.e3_integral = self.e3_integral * leak_constant + e3 * dt
+        """
 
-        # Compute control inputs, e.g. efforts to the actuators. We're only using a PD controller for now.
-        u1 = Kp1 * e1 + Kd1 * e1_dot
-        u2 = Kp2 * e2 + Kd2 * e2_dot
-        u3 = Kp3 * e3 + Kd3 * e3_dot
+        # Compute control inputs, e.g. efforts to the actuators. We're only using a PI controller for now.
+        u1 = Kp1 * e1 + Ki1 * self.e1_integral
+        u2 = Kp2 * e2 + Ki2 * self.e2_integral
+        u3 = Kp3 * e3 + Ki3 * self.e3_integral
 
         control_effort = Float64MultiArray()
         control_effort.data = [u1, u2, u3]
-
-        self._last_q1_dot = joint_velocities[0]
-        self._last_q2_dot = joint_velocities[1]
-        self._last_q3_dot = joint_velocities[2]
 
         self._forward_effort_publisher.publish(control_effort)
 
