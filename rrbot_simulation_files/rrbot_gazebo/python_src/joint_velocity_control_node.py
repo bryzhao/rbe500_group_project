@@ -74,8 +74,38 @@ class JointVelocityController(Node):
 
         self.get_logger().info(f"Initializing {self.get_name()} node...")
 
-    def _compute_jacobian_from_joint_positions(self, joint_positions) -> list:
+    def _compute_jacobian_from_joint_positions(self, joint_angles) -> list:
         """Derived SCARA 3DOF Jacobian. Implement here."""
+        # Parse out joint angles and velocities
+        joint_angles = msg.position
+        #Took this from the joint_effort_controllers node
+        q1 = self._q1_reference - joint_angles[0]
+        q2 = self._q2_reference - joint_angles[1]
+        q3 = self._q3_reference - joint_angles[2]
+
+        q = np.array([q1, q2, q3])
+
+        #Jacobian of Joint 1
+        J1 = np.array([-((l2*np.sin(q1)*np.cos(q2))+(l2*np.cos(q1)*np.sin(q2))+(l1*np.sin(q1))), \
+                       (l2*np.cos(q1)*np.cos(q2))-(l2*np.sin(q1)*np.cos(q2))+(l1*np.cos(q1)), \
+                        0, 0, 0, 1])
+
+        #Jacobian of Joint 2
+        J2 = np.array([-(l2*np.sin(q1)*np.cos(q2)+l2*np.cos(q1)*np.sin(q2)+l1*np.sin(q1)-l1*np.sin(q1)), \
+                       (l2*np.cos(q1)*np.cos(q2)-l2*np.sin(q1)*np.cos(q2)+l1*np.cos(q1)-l1*np.cos(q1)), \
+                        0, 0, 0, 1])
+
+        #Jacobian of Joint 3
+        J3 = np. array ([0, 0, 0, 0, 0, 1])
+
+        #Merging joint jacobians into 1 matrix
+        J = np.vstack((J1, J2, J3)).T
+
+        twist = np.dot(J,q)
+
+
+
+        
         #Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
         """jacobian = np.array([[r_11, r_12, r_13],
                       [r_21, r_22, r_23],
@@ -100,12 +130,7 @@ class JointVelocityController(Node):
 
         self._q1_dot_reference = request.input_q1_dot
         self._q2_dot_reference = request.input_q2_dot
-        self._q3_dot_reference = request.input_q3_dot
-
-        # Return a successful status, if we've received the service call
-        response.status = True
-        return response
-
+        q = np.array([q1, q2, q3])
     def _cart_vel_serv_callback(self, request: CartesianVelocityInput.Request, response):
         """If we receive a Cartesian service request, map the velocities through the Jacobian to get
         joint velocities, and then set our reference values."""
@@ -139,6 +164,12 @@ class JointVelocityController(Node):
         # Parse out joint angles and velocities
         joint_angles = msg.position
         jacobian = self._compute_jacobian_from_joint_positions(joint_angles)
+
+        #Took this from the joint_effort_controllers node
+        q1 = self._q1_reference - joint_angles[0]
+        q2 = self._q2_reference - joint_angles[1]
+        q3 = self._q3_reference - joint_angles[2]
+
 
         joint_velocities = msg.velocity
         e1 = self._q1_dot_reference - joint_velocities[0]
