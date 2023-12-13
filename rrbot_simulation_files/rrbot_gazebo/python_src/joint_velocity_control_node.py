@@ -27,6 +27,11 @@ from sensor_msgs.msg import JointState
 from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 
 # Globals / tunable gains for PI controller
+
+# TODO (Rutvij): Tune the controller by actuating one joint at a time and keeping the
+#  2 others fixed (probably in the URDF file, this was called out in the assignment I think),
+#  tuning one set of gains, and then moving onto the next joint.
+
 Kp1 = 5.0
 Ki1 = 0.01
 
