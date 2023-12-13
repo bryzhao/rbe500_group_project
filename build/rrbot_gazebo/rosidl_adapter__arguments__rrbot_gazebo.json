@@ -1,0 +1,9 @@
+{
+  "package_name": "rrbot_gazebo",
+  "non_idl_tuples": [
+    "/home/rutvij/rbe500_group_project-1/rrbot_simulation_files/rrbot_gazebo:srv/IKService.srv",
+    "/home/rutvij/rbe500_group_project-1/rrbot_simulation_files/rrbot_gazebo:srv/ControlInput.srv",
+    "/home/rutvij/rbe500_group_project-1/rrbot_simulation_files/rrbot_gazebo:srv/CartesianVelocityInput.srv",
+    "/home/rutvij/rbe500_group_project-1/rrbot_simulation_files/rrbot_gazebo:srv/JointVelocityInput.srv"
+  ]
+}

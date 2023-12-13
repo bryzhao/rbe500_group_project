@@ -1,0 +1,186 @@
+[0.037s] Invoking command in '/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo': CMAKE_PREFIX_PATH=/home/rutvij/rbe500_group_project-1/install/rrbot_description:/home/rutvij/rbe500_group_project-1/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/rutvij/rbe500_group_project-1/build/rrbot_gazebo -- -j12 -l12
+[0.072s] [  1%] Built target rrbot_gazebo__cpp
+[0.073s] [  5%] Built target switch
+[0.074s] [  8%] Built target publisher
+[0.074s] [ 18%] Built target rrbot_gazebo__rosidl_generator_c
+[0.076s] [ 18%] Built target ament_cmake_python_symlink_rrbot_gazebo
+[0.088s] [ 28%] Built target rrbot_gazebo__rosidl_typesupport_c
+[0.091s] [ 54%] Built target rrbot_gazebo__rosidl_typesupport_cpp
+[0.091s] [ 54%] Built target rrbot_gazebo__rosidl_typesupport_introspection_cpp
+[0.091s] [ 59%] Built target rrbot_gazebo__rosidl_typesupport_fastrtps_cpp
+[0.092s] [ 69%] Built target rrbot_gazebo__rosidl_typesupport_introspection_c
+[0.093s] [ 79%] Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c
+[0.105s] [ 79%] Built target rrbot_gazebo
+[0.118s] [ 81%] Built target rrbot_gazebo__py
+[0.132s] [ 89%] Built target rrbot_gazebo__rosidl_generator_py
+[0.148s] [ 93%] Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext
+[0.150s] [ 96%] Built target rrbot_gazebo__rosidl_typesupport_c__pyext
+[0.151s] [100%] Built target rrbot_gazebo__rosidl_typesupport_introspection_c__pyext
+[0.215s] running egg_info
+[0.215s] writing rrbot_gazebo.egg-info/PKG-INFO
+[0.215s] writing dependency_links to rrbot_gazebo.egg-info/dependency_links.txt
+[0.215s] writing top-level names to rrbot_gazebo.egg-info/top_level.txt
+[0.216s] reading manifest file 'rrbot_gazebo.egg-info/SOURCES.txt'
+[0.216s] writing manifest file 'rrbot_gazebo.egg-info/SOURCES.txt'
+[0.233s] [100%] Built target ament_cmake_python_build_rrbot_gazebo_egg
+[0.240s] Invoked command in '/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rutvij/rbe500_group_project-1/install/rrbot_description:/home/rutvij/rbe500_group_project-1/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/rutvij/rbe500_group_project-1/build/rrbot_gazebo -- -j12 -l12
+[0.301s] Invoking command in '/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo': CMAKE_PREFIX_PATH=/home/rutvij/rbe500_group_project-1/install/rrbot_description:/home/rutvij/rbe500_group_project-1/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/rutvij/rbe500_group_project-1/build/rrbot_gazebo
+[0.306s] -- Install configuration: ""
+[0.306s] -- Execute custom install script
+[0.306s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/rrbot_gazebo/publisher
+[0.306s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/rrbot_gazebo/switch
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/launch/rrbot_world.launch.py
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/worlds/rrbot.world
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/config/controllers.yaml
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/config/gazebo_controllers.yaml
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/rrbot_gazebo/forward_kinematics_node.py
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/rrbot_gazebo/inverse_kinematics_node.py
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/rrbot_gazebo/joint_effort_control_node.py
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/rrbot_gazebo/joint_velocity_control_node.py
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/ament_index/resource_index/rosidl_interfaces/rrbot_gazebo
+[0.307s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_generator_c__visibility_control.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/cartesian_velocity_input.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/control_input.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__functions.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__struct.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__type_support.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__functions.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__struct.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__type_support.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__functions.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__struct.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__type_support.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__functions.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__struct.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__type_support.h
+[0.308s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/ik_service.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/joint_velocity_input.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/library_path.sh
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/library_path.dsv
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__rosidl_typesupport_fastrtps_c.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__rosidl_typesupport_fastrtps_c.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_fastrtps_c.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__rosidl_typesupport_fastrtps_c.h
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/cartesian_velocity_input.hpp
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/control_input.hpp
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__builder.hpp
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__struct.hpp
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__traits.hpp
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__builder.hpp
+[0.309s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__struct.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__traits.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__builder.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__struct.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__traits.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__builder.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__struct.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__traits.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/ik_service.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/joint_velocity_input.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__rosidl_typesupport_fastrtps_cpp.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__rosidl_typesupport_fastrtps_cpp.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_fastrtps_cpp.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__rosidl_typesupport_fastrtps_cpp.hpp
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.310s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__rosidl_typesupport_introspection_c.h
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__rosidl_typesupport_introspection_c.h
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_introspection_c.h
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__rosidl_typesupport_introspection_c.h
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/cartesian_velocity_input__rosidl_typesupport_introspection_cpp.hpp
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/control_input__rosidl_typesupport_introspection_cpp.hpp
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/ik_service__rosidl_typesupport_introspection_cpp.hpp
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/include/rrbot_gazebo/rrbot_gazebo/srv/detail/joint_velocity_input__rosidl_typesupport_introspection_cpp.hpp
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/pythonpath.sh
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/pythonpath.dsv
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/PKG-INFO
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/SOURCES.txt
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/dependency_links.txt
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo-0.2.0-py3.10.egg-info/top_level.txt
+[0.311s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/__init__.py
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_c.c
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_introspection_c.c
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/__init__.py
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_cartesian_velocity_input.py
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_cartesian_velocity_input_s.c
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_control_input.py
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_control_input_s.c
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_ik_service.py
+[0.312s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_ik_service_s.c
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_joint_velocity_input.py
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv/_joint_velocity_input_s.c
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/rrbot_gazebo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService.idl
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/ControlInput.idl
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/CartesianVelocityInput.idl
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/JointVelocityInput.idl
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService.srv
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService_Request.msg
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/IKService_Response.msg
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/ControlInput.srv
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/ControlInput_Request.msg
+[0.313s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/ControlInput_Response.msg
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/CartesianVelocityInput.srv
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/CartesianVelocityInput_Request.msg
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/CartesianVelocityInput_Response.msg
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/JointVelocityInput.srv
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/JointVelocityInput_Request.msg
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/srv/JointVelocityInput_Response.msg
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/ament_index/resource_index/package_run_dependencies/rrbot_gazebo
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/ament_index/resource_index/parent_prefix_path/rrbot_gazebo
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/ament_prefix_path.sh
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/ament_prefix_path.dsv
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/path.sh
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/environment/path.dsv
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.bash
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.sh
+[0.314s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.zsh
+[0.315s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/local_setup.dsv
+[0.315s] -- Symlinking: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/package.dsv
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/ament_index/resource_index/packages/rrbot_gazebo
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rosidl_cmake-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_libraries-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/ament_cmake_export_targets-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazeboConfig.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazeboConfig-version.cmake
+[0.320s] -- Up-to-date symlink: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/package.xml
+[0.320s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_generator_c.so
+[0.320s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_fastrtps_c.so
+[0.320s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_fastrtps_cpp.so
+[0.321s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_introspection_c.so
+[0.321s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_c.so
+[0.321s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_introspection_cpp.so
+[0.321s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_typesupport_cpp.so
+[0.339s] Listing '/home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo'...
+[0.339s] Listing '/home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/local/lib/python3.10/dist-packages/rrbot_gazebo/srv'...
+[0.341s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/lib/librrbot_gazebo__rosidl_generator_py.so
+[0.341s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_cExport.cmake
+[0.341s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_cExport-noconfig.cmake
+[0.341s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cExport.cmake
+[0.341s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.341s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_cppExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cExport-noconfig.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cppExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cppExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/rrbot_gazebo__rosidl_typesupport_cppExport-noconfig.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_pyExport.cmake
+[0.342s] -- Up-to-date: /home/rutvij/rbe500_group_project-1/install/rrbot_gazebo/share/rrbot_gazebo/cmake/export_rrbot_gazebo__rosidl_generator_pyExport-noconfig.cmake
+[0.343s] Invoked command in '/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/rutvij/rbe500_group_project-1/install/rrbot_description:/home/rutvij/rbe500_group_project-1/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_gazebo:/home/rutvij/ros2_ws/install/rrbot_description:/home/rutvij/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/rutvij/rbe500_group_project-1/build/rrbot_gazebo

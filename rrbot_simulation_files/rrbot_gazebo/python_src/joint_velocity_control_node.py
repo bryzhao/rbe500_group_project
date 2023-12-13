@@ -23,7 +23,7 @@ from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 from sensor_msgs.msg import JointState
 
-from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
+#from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 
 # Globals / tunable gains for PI controller
 Kp1 = 5.0
@@ -82,8 +82,6 @@ class JointVelocityController(Node):
 
     def _compute_jacobian_from_joint_positions(self, joint_angles) -> list:
         """Derived SCARA 3DOF Jacobian. Implement here."""
-        # Parse out joint angles and velocities
-        joint_angles = msg.position
 
         #Took this from the joint_effort_controllers node
         q1 = self._q1_reference - joint_angles[0]
@@ -126,10 +124,10 @@ class JointVelocityController(Node):
         """need to add angular velocity component to cartesian_velocities. matrix is only 3x1 needs to be 6x1
         #would like some help here on how to find angular velocites per joint"""
 
-        angular_velocities = [0, 0, 0]
+        angular_velocities = [0, 0, 0] #end effector would have have no angular velocity becasue it can't rotate
         twist = np.concatenate([cartesian_velocities, angular_velocities]) 
         inv_jacobian = np.linalg.pinv(jacobian)
-        joint_velocities = np.dot(inv_jacobian, twist)
+        self._joint_velocities = np.dot(inv_jacobian, twist)
 
         raise NotImplementedError
 
@@ -139,8 +137,8 @@ class JointVelocityController(Node):
 
         self._q1_dot_reference = request.input_q1_dot
         self._q2_dot_reference = request.input_q2_dot
-        q = np.array([q1, q2, q3])
-    
+        self._q3_dot_reference = request.input_q3_dot
+
     def _cart_vel_serv_callback(self, request: CartesianVelocityInput.Request, response):
         """If we receive a Cartesian service request, map the velocities through the Jacobian to get
         joint velocities, and then set our reference values."""

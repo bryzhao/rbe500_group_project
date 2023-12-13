@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo/publisher" "/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo/switch" "TARGETS" "publisher" "switch" "DESTINATION" "lib/rrbot_gazebo")
