@@ -35,6 +35,12 @@ Ki2 = 0
 Kp3 = 5.0
 Ki3 = 0
 
+l1 = 1 #Length of link1
+l2 = 1 #Length of link2
+l3 = 1 #Length of link3
+
+
+
 np.set_printoptions(precision=3, suppress=True)
 
 
@@ -78,12 +84,13 @@ class JointVelocityController(Node):
         """Derived SCARA 3DOF Jacobian. Implement here."""
         # Parse out joint angles and velocities
         joint_angles = msg.position
+
         #Took this from the joint_effort_controllers node
         q1 = self._q1_reference - joint_angles[0]
         q2 = self._q2_reference - joint_angles[1]
         q3 = self._q3_reference - joint_angles[2]
 
-        q = np.array([q1, q2, q3])
+        #q = np.array([q1, q2, q3])
 
         #Jacobian of Joint 1
         J1 = np.array([-((l2*np.sin(q1)*np.cos(q2))+(l2*np.cos(q1)*np.sin(q2))+(l1*np.sin(q1))), \
@@ -99,14 +106,9 @@ class JointVelocityController(Node):
         J3 = np. array ([0, 0, 0, 0, 0, 1])
 
         #Merging joint jacobians into 1 matrix
-        J = np.vstack((J1, J2, J3)).T
+        self.jacobian = np.vstack((J1, J2, J3)).T
 
-        twist = np.dot(J,q)
-
-
-
-        
-        #Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
+                #Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
         """jacobian = np.array([[r_11, r_12, r_13],
                       [r_21, r_22, r_23],
                       [r_31, r_32, r_33],
@@ -115,13 +117,20 @@ class JointVelocityController(Node):
                       [r_61, r_62, r_63]])"""
 
         #jacobian = computed_above
+        #return Jacobian
         raise NotImplementedError
 
-    def compute_joint_velocities_from_cart_velocity(self, cartesian_velocities) -> list:
+    def compute_joint_velocities_from_cart_velocity(self, jacobian, cartesian_velocities) -> list:
         """Implement Pseudoinverse Jacobian."""
         #computed_joint_velocities = np.linalg.pinv(self.jacobian) @ cartesian_velocities
         """need to add angular velocity component to cartesian_velocities. matrix is only 3x1 needs to be 6x1
         #would like some help here on how to find angular velocites per joint"""
+
+        angular_velocities = [0, 0, 0]
+        twist = np.concatenate([cartesian_velocities, angular_velocities]) 
+        inv_jacobian = np.linalg.pinv(jacobian)
+        joint_velocities = np.dot(inv_jacobian, twist)
+
         raise NotImplementedError
 
     def _joint_vel_serv_callback(self, request: JointVelocityInput.Request, response):
@@ -131,13 +140,14 @@ class JointVelocityController(Node):
         self._q1_dot_reference = request.input_q1_dot
         self._q2_dot_reference = request.input_q2_dot
         q = np.array([q1, q2, q3])
+    
     def _cart_vel_serv_callback(self, request: CartesianVelocityInput.Request, response):
         """If we receive a Cartesian service request, map the velocities through the Jacobian to get
         joint velocities, and then set our reference values."""
 
         self.get_logger().info(f"Request received: {request}.")
 
-        cart_velocities: np.ndarray = np.array([request.input_x_dot, request.input_y_dot,
+        cart_velocities = np.array([request.input_x_dot, request.input_y_dot,
                                                 request.input_z_dot])
         q_dot_reference = self.compute_joint_velocities_from_cart_velocity(cart_velocities)
 
