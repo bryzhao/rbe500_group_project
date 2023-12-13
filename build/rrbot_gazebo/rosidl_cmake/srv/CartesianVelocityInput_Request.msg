@@ -1,4 +1,0 @@
-# Request (all linear velocities for Cartesian motions of the EEF)
-float32 input_x_dot
-float32 input_y_dot
-float32 input_z_dot

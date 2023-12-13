@@ -1,4 +1,0 @@
-# Request
-float32 input_q1
-float32 input_q2
-float32 input_q3

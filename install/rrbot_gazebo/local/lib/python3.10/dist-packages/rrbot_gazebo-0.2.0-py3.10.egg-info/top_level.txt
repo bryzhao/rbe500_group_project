@@ -1,1 +1,0 @@
-/home/rutvij/rbe500_group_project-1/build/rrbot_gazebo/ament_cmake_python/rrbot_gazebo/rrbot_gazebo.egg-info/top_level.txt
