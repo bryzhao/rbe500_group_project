@@ -9,37 +9,36 @@ Note: use a command like this to test our effort controller (by suppling referen
 
 
 Service calls:
- > ros2 service call /joint_input_service rrbot_gazebo/srv/JointVelocityInput "{input_q1_dot: 1.0, input_q2_dot: 2.0,
+ > ros2 service call /joint_vel_input_service rrbot_gazebo/srv/JointVelocityInput "{input_q1_dot: 1.0, input_q2_dot: 2.0,
                                                                                 input_q3_dot: 3.0}"
 
- > ros2 service call /joint_input_service rrbot_gazebo/srv/CartesianVelocityInput "{input_q1_dot: 1.0,
-                                                                                    input_q2_dot: 2.0,
-                                                                                    input_q3_dot: 3.0}"
+ > ros2 service call /cart_vel_input_service rrbot_gazebo/srv/CartesianVelocityInput "{input_x_dot: 1.0,
+                                                                                    input_y_dot: 0.0,
+                                                                                    input_z_dot: 0.0}"
 """
 
 import numpy as np
 import rclpy
+from numpy import ndarray
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 from sensor_msgs.msg import JointState
 
-#from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
+from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 
 # Globals / tunable gains for PI controller
 Kp1 = 5.0
-Ki1 = 0
+Ki1 = 0.01
 
 Kp2 = 5.0
-Ki2 = 0
+Ki2 = 0.01
 
 Kp3 = 5.0
-Ki3 = 0
+Ki3 = 0.01
 
-l1 = 1 #Length of link1
-l2 = 1 #Length of link2
-l3 = 1 #Length of link3
-
-
+l1 = 1  # Length of link1
+l2 = 1  # Length of link2
+l3 = 1  # Length of link3
 
 np.set_printoptions(precision=3, suppress=True)
 
@@ -80,33 +79,36 @@ class JointVelocityController(Node):
 
         self.get_logger().info(f"Initializing {self.get_name()} node...")
 
-    def _compute_jacobian_from_joint_positions(self, joint_angles) -> list:
+    def _compute_jacobian_from_joint_positions(self, joint_angles: list) -> ndarray:
         """Derived SCARA 3DOF Jacobian. Implement here."""
 
-        #Took this from the joint_effort_controllers node
-        q1 = self._q1_reference - joint_angles[0]
-        q2 = self._q2_reference - joint_angles[1]
-        q3 = self._q3_reference - joint_angles[2]
+        # Took this from the joint_effort_controllers node
+        # q1 = self._q1_reference - joint_angles[0]
+        # q2 = self._q2_reference - joint_angles[1]
+        # q3 = self._q3_reference - joint_angles[2]
+        q1 = joint_angles[0]
+        q2 = joint_angles[1]
+        q3 = joint_angles[2]
 
-        #q = np.array([q1, q2, q3])
+        # Jacobian of Joint 1
+        J1 = np.array([-((l2 * np.sin(q1) * np.cos(q2)) + (l2 * np.cos(q1) * np.sin(q2)) + (l1 * np.sin(q1))),
+                       (l2 * np.cos(q1) * np.cos(q2)) - (l2 * np.sin(q1) * np.cos(q2)) + (l1 * np.cos(q1)), 0, 0, 0, 1])
 
-        #Jacobian of Joint 1
-        J1 = np.array([-((l2*np.sin(q1)*np.cos(q2))+(l2*np.cos(q1)*np.sin(q2))+(l1*np.sin(q1))), \
-                       (l2*np.cos(q1)*np.cos(q2))-(l2*np.sin(q1)*np.cos(q2))+(l1*np.cos(q1)), \
-                        0, 0, 0, 1])
+        # Jacobian of Joint 2
+        J2 = np.array(
+            [-(l2 * np.sin(q1) * np.cos(q2) + l2 * np.cos(q1) * np.sin(q2) + l1 * np.sin(q1) - l1 * np.sin(q1)),
+             (l2 * np.cos(q1) * np.cos(q2) - l2 * np.sin(q1) * np.cos(q2) + l1 * np.cos(q1) - l1 * np.cos(q1)),
+             0, 0, 0, 1])
 
-        #Jacobian of Joint 2
-        J2 = np.array([-(l2*np.sin(q1)*np.cos(q2)+l2*np.cos(q1)*np.sin(q2)+l1*np.sin(q1)-l1*np.sin(q1)), \
-                       (l2*np.cos(q1)*np.cos(q2)-l2*np.sin(q1)*np.cos(q2)+l1*np.cos(q1)-l1*np.cos(q1)), \
-                        0, 0, 0, 1])
+        # Jacobian of Joint 3
+        J3 = np.array([0, 0, 0, 0, 0, 1])
 
-        #Jacobian of Joint 3
-        J3 = np. array ([0, 0, 0, 0, 0, 1])
+        # Merging joint jacobians into 1 matrix
+        jacobian = np.vstack((J1, J2, J3)).T
 
-        #Merging joint jacobians into 1 matrix
-        self.jacobian = np.vstack((J1, J2, J3)).T
+        self.jacobian = jacobian
 
-                #Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
+        # Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
         """jacobian = np.array([[r_11, r_12, r_13],
                       [r_21, r_22, r_23],
                       [r_31, r_32, r_33],
@@ -114,30 +116,33 @@ class JointVelocityController(Node):
                       [r_51, r_52, r_53],
                       [r_61, r_62, r_63]])"""
 
-        #jacobian = computed_above
-        #return Jacobian
-        raise NotImplementedError
+        return jacobian
 
-    def compute_joint_velocities_from_cart_velocity(self, jacobian, cartesian_velocities) -> list:
+    def compute_joint_velocities_from_cart_velocity(self, cartesian_velocities) -> ndarray:
         """Implement Pseudoinverse Jacobian."""
-        #computed_joint_velocities = np.linalg.pinv(self.jacobian) @ cartesian_velocities
+        # computed_joint_velocities = np.linalg.pinv(self.jacobian) @ cartesian_velocities
         """need to add angular velocity component to cartesian_velocities. matrix is only 3x1 needs to be 6x1
         #would like some help here on how to find angular velocites per joint"""
 
-        angular_velocities = [0, 0, 0] #end effector would have have no angular velocity becasue it can't rotate
-        twist = np.concatenate([cartesian_velocities, angular_velocities]) 
-        inv_jacobian = np.linalg.pinv(jacobian)
-        self._joint_velocities = np.dot(inv_jacobian, twist)
+        # Note that we compute and store the jacobian internally on every cycle.
+        angular_velocities = [0, 0, 0]  # end effector has no angular vel since it's modeled as a point
+        twist = np.concatenate([cartesian_velocities, angular_velocities])
+        inv_jacobian = np.linalg.pinv(self.jacobian)
+        joint_velocities = np.dot(inv_jacobian, twist)
 
-        raise NotImplementedError
+        return joint_velocities
 
     def _joint_vel_serv_callback(self, request: JointVelocityInput.Request, response):
-        """If we receive a joint velocity service request, set our reference values directly.Used for testing controller performance (transient response)"""
+        """If we receive a joint velocity service request, set our reference values directly.
+        Used for testing controller performance (transient response)"""
         self.get_logger().info(f"Request received: {request}.")
 
         self._q1_dot_reference = request.input_q1_dot
         self._q2_dot_reference = request.input_q2_dot
         self._q3_dot_reference = request.input_q3_dot
+
+        response.status = True
+        return response
 
     def _cart_vel_serv_callback(self, request: CartesianVelocityInput.Request, response):
         """If we receive a Cartesian service request, map the velocities through the Jacobian to get
@@ -146,8 +151,8 @@ class JointVelocityController(Node):
         self.get_logger().info(f"Request received: {request}.")
 
         cart_velocities = np.array([request.input_x_dot, request.input_y_dot,
-                                                request.input_z_dot])
-        q_dot_reference = self.compute_joint_velocities_from_cart_velocity(cart_velocities)
+                                    request.input_z_dot])
+        q_dot_reference = self.compute_joint_velocities_from_cart_velocity(cartesian_velocities=cart_velocities)
 
         self._q1_dot_reference = q_dot_reference[0]
         self._q2_dot_reference = q_dot_reference[1]
@@ -171,13 +176,17 @@ class JointVelocityController(Node):
 
         # Parse out joint angles and velocities
         joint_angles = msg.position
-        jacobian = self._compute_jacobian_from_joint_positions(joint_angles)
 
-        #Took this from the joint_effort_controllers node
-        q1 = self._q1_reference - joint_angles[0]
-        q2 = self._q2_reference - joint_angles[1]
-        q3 = self._q3_reference - joint_angles[2]
+        # Compute and then store jacobian internally
+        self._compute_jacobian_from_joint_positions(joint_angles)
 
+        # Note (BZ): Commented below out. Not sure why this got added in, but we don't use q1_reference,
+        # only q1_dot_reference here.
+
+        # Took this from the joint_effort_controllers node
+        # q1 = self._q1_reference - joint_angles[0]
+        # q2 = self._q2_reference - joint_angles[1]
+        # q3 = self._q3_reference - joint_angles[2]
 
         joint_velocities = msg.velocity
         e1 = self._q1_dot_reference - joint_velocities[0]
@@ -186,12 +195,12 @@ class JointVelocityController(Node):
 
         dt = 0.01  # 100 [Hz] for cycle time in simulation
 
-        #sums error every time step, Might enable integral windup
+        # sums error every time step, Might enable integral windup
         self.e1_integral += e1 * dt
         self.e2_integral += e2 * dt
         self.e3_integral += e3 * dt
 
-        #With leaky integrator: lowers integral at a constant rate to prevent integral windup
+        # With leaky integrator: lowers integral at a constant rate to prevent integral windup
         """
         leak_constant = 0.08
         self.e1_integral = self.e1_integral * leak_constant + e1 * dt
