@@ -32,14 +32,14 @@ from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 #  2 others fixed (probably in the URDF file, this was called out in the assignment I think),
 #  tuning one set of gains, and then moving onto the next joint.
 
-Kp1 = 50
+Kp1 = 30
 Ki1 = 0.01
 
-Kp2 = 15
+Kp2 = 10.0
 Ki2 = 0.01
 
-Kp3 = 0
-Ki3 = 0
+Kp3 = 7.0
+Ki3 = 0.01
 
 l1 = 1  # Length of link1
 l2 = 1  # Length of link2
@@ -179,9 +179,24 @@ class JointVelocityController(Node):
         dt = 0.01  # 100 [Hz] for cycle time in simulation
 
         # sums error every time step, Might enable integral windup
-        #self.e1_integral += e1 * dt
-        #self.e2_integral += e2 * dt
-        #self.e3_integral += e3 * dt
+        self.e1_integral += e1 * dt
+        self.e2_integral += e2 * dt
+        self.e3_integral += e3 * dt
+
+        if (self.e1_integral < 0.02):
+            self.e1_integral = 0.02
+        else:
+            exit
+        
+        if (self.e2_integral < 0.02):
+            self.e2_integral = 0.02
+        else:
+            exit
+        
+        if (self.e3_integral < 0.02):
+            self.e3_integral = 0.02
+        else:
+            exit
 
         # With leaky integrator: lowers integral at a constant rate to prevent integral windup
 
