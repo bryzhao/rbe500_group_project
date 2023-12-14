@@ -3,7 +3,10 @@
   "output_dir": "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_typesupport_fastrtps_cpp/rrbot_gazebo",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo:srv/IKService.idl"
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo:srv/IKService.idl",
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo:srv/ControlInput.idl",
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo:srv/CartesianVelocityInput.idl",
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo:srv/JointVelocityInput.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -78,6 +81,9 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
     "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/IKService.idl",
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/ControlInput.idl",
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/CartesianVelocityInput.idl",
+    "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/JointVelocityInput.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

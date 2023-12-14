@@ -4,3 +4,8 @@ rrbot_gazebo.egg-info/PKG-INFO
 rrbot_gazebo.egg-info/SOURCES.txt
 rrbot_gazebo.egg-info/dependency_links.txt
 rrbot_gazebo.egg-info/top_level.txt
+rrbot_gazebo/srv/__init__.py
+rrbot_gazebo/srv/_cartesian_velocity_input.py
+rrbot_gazebo/srv/_control_input.py
+rrbot_gazebo/srv/_ik_service.py
+rrbot_gazebo/srv/_joint_velocity_input.py

@@ -70,8 +70,14 @@ rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/_
 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_introspection_c.c
 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_c.c
 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_ik_service.py
+rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_control_input.py
+rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input.py
+rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input.py
 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/__init__.py
 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c
+rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c
+rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c
+rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c
 
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +93,9 @@ rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrbot_gazebo/srv/IKService.idl
+rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrbot_gazebo/srv/ControlInput.idl
+rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrbot_gazebo/srv/CartesianVelocityInput.idl
+rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rrbot_gazebo/srv/JointVelocityInput.idl
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -160,18 +169,42 @@ rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_c.c: rosi
 rosidl_generator_py/rrbot_gazebo/srv/_ik_service.py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_ik_service.py
 
+rosidl_generator_py/rrbot_gazebo/srv/_control_input.py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_control_input.py
+
+rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input.py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input.py
+
+rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input.py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input.py
+
 rosidl_generator_py/rrbot_gazebo/srv/__init__.py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/__init__.py
 
 rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c
 
+rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c
+
+rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c
+
+rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c
+
 rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_c.c
 rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_fastrtps_c.c
 rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/_rrbot_gazebo_s.ep.rosidl_typesupport_introspection_c.c
 rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/__init__.py
+rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input.py
+rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c
+rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_control_input.py
+rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c
 rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_ik_service.py
 rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c
+rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input.py
+rrbot_gazebo__py: rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c
 rrbot_gazebo__py: rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py
 rrbot_gazebo__py: rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/build.make
 .PHONY : rrbot_gazebo__py

@@ -226,7 +226,7 @@ CMakeFiles/publisher.dir/clean:
 CMakeFiles/switch.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=34,35 "Built target switch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=58,59 "Built target switch"
 .PHONY : CMakeFiles/switch.dir/all
 
 # Build rule for subdir invocation for target.
@@ -264,7 +264,7 @@ CMakeFiles/rrbot_gazebo.dir/all: CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 43
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo.dir/rule
@@ -285,12 +285,12 @@ CMakeFiles/rrbot_gazebo.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=5,6,7 "Built target rrbot_gazebo__rosidl_generator_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target rrbot_gazebo__rosidl_generator_c"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/rule
@@ -311,12 +311,12 @@ CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/all: CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=18,19,20 "Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=30,31,32,33,34,35 "Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c.dir/rule
@@ -363,12 +363,12 @@ CMakeFiles/rrbot_gazebo__cpp.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/all: CMakeFiles/rrbot_gazebo__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=23,24,25 "Built target rrbot_gazebo__rosidl_typesupport_fastrtps_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=38,39,40,41,42,43 "Built target rrbot_gazebo__rosidl_typesupport_fastrtps_cpp"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/rule
@@ -389,12 +389,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_cpp.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/all: CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=26,27,28 "Built target rrbot_gazebo__rosidl_typesupport_introspection_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=44,45,46,47,48,49 "Built target rrbot_gazebo__rosidl_typesupport_introspection_c"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/rule
@@ -415,12 +415,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/all: CMakeFiles/rrbot_gazebo__rosidl_generator_c.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=10,11,12 "Built target rrbot_gazebo__rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=16,17,18,19,20,21 "Built target rrbot_gazebo__rosidl_typesupport_c"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/rule
@@ -441,12 +441,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_c.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/all: CMakeFiles/rrbot_gazebo__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=31,32,33 "Built target rrbot_gazebo__rosidl_typesupport_introspection_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=52,53,54,55,56,57 "Built target rrbot_gazebo__rosidl_typesupport_introspection_cpp"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/rule
@@ -467,12 +467,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_cpp.dir/clean:
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/all: CMakeFiles/rrbot_gazebo__cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=15,16,17 "Built target rrbot_gazebo__rosidl_typesupport_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=24,25,26,27,28,29 "Built target rrbot_gazebo__rosidl_typesupport_cpp"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_cpp.dir/rule
@@ -547,12 +547,12 @@ CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/all: CMakeFiles/rrbot_gazebo__r
 CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/all: rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=8,9 "Built target rrbot_gazebo__rosidl_generator_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=11,12,13,14,15 "Built target rrbot_gazebo__rosidl_generator_py"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 49
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rule
@@ -577,12 +577,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFile
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/all: rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=21,22 "Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=36,37 "Built target rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 51
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_fastrtps_c__pyext.dir/rule
@@ -607,12 +607,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/all: CMak
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/all: rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=29,30 "Built target rrbot_gazebo__rosidl_typesupport_introspection_c__pyext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=50,51 "Built target rrbot_gazebo__rosidl_typesupport_introspection_c__pyext"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 51
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_introspection_c__pyext.dir/rule
@@ -636,12 +636,12 @@ CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/all: CMakeFiles/rrbot_g
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/all: rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/build.make CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=13,14 "Built target rrbot_gazebo__rosidl_typesupport_c__pyext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=22,23 "Built target rrbot_gazebo__rosidl_typesupport_c__pyext"
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 51
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : CMakeFiles/rrbot_gazebo__rosidl_typesupport_c__pyext.dir/rule
@@ -667,7 +667,7 @@ rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/all: CMakeFiles/rrbot_gazebo.di
 
 # Build rule for subdir invocation for target.
 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 44
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles 0
 .PHONY : rrbot_gazebo__py/CMakeFiles/rrbot_gazebo__py.dir/rule

@@ -32,8 +32,8 @@ from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 #  2 others fixed (probably in the URDF file, this was called out in the assignment I think),
 #  tuning one set of gains, and then moving onto the next joint.
 
-Kp1 = 5.0
-Ki1 = 0.01
+Kp1 = 60
+Ki1 = 5
 
 Kp2 = 5.0
 Ki2 = 0.01
@@ -87,10 +87,6 @@ class JointVelocityController(Node):
     def _compute_jacobian_from_joint_positions(self, joint_angles: list) -> ndarray:
         """Derived SCARA 3DOF Jacobian. Implement here."""
 
-        # Took this from the joint_effort_controllers node
-        # q1 = self._q1_reference - joint_angles[0]
-        # q2 = self._q2_reference - joint_angles[1]
-        # q3 = self._q3_reference - joint_angles[2]
         q1 = joint_angles[0]
         q2 = joint_angles[1]
         q3 = joint_angles[2]
@@ -106,28 +102,17 @@ class JointVelocityController(Node):
              0, 0, 0, 1])
 
         # Jacobian of Joint 3
-        J3 = np.array([0, 0, 0, 0, 0, 1])
+        J3 = np.array([0, 0, q3, 0, 0, 1])
 
         # Merging joint jacobians into 1 matrix
         jacobian = np.vstack((J1, J2, J3)).T
 
         self.jacobian = jacobian
 
-        # Add FK matrices T_end_effector = A1 * A2 * A3 to use vectors required for jacobian
-        """jacobian = np.array([[r_11, r_12, r_13],
-                      [r_21, r_22, r_23],
-                      [r_31, r_32, r_33],
-                      [r_41, r_42, r_43],
-                      [r_51, r_52, r_53],
-                      [r_61, r_62, r_63]])"""
-
         return jacobian
 
     def compute_joint_velocities_from_cart_velocity(self, cartesian_velocities) -> ndarray:
         """Implement Pseudoinverse Jacobian."""
-        # computed_joint_velocities = np.linalg.pinv(self.jacobian) @ cartesian_velocities
-        """need to add angular velocity component to cartesian_velocities. matrix is only 3x1 needs to be 6x1
-        #would like some help here on how to find angular velocites per joint"""
 
         # Note that we compute and store the jacobian internally on every cycle.
         angular_velocities = [0, 0, 0]  # end effector has no angular vel since it's modeled as a point
@@ -177,7 +162,7 @@ class JointVelocityController(Node):
 
         # Retrieves a float array of q1, q2, q3
         if len(msg.position) != 3:
-            print("[WARNING] Callback needs to accept 3 joint angles only.")
+           print("[WARNING] Callback needs to accept 3 joint angles only.")
 
         # Parse out joint angles and velocities
         joint_angles = msg.position
@@ -185,13 +170,6 @@ class JointVelocityController(Node):
         # Compute and then store jacobian internally
         self._compute_jacobian_from_joint_positions(joint_angles)
 
-        # Note (BZ): Commented below out. Not sure why this got added in, but we don't use q1_reference,
-        # only q1_dot_reference here.
-
-        # Took this from the joint_effort_controllers node
-        # q1 = self._q1_reference - joint_angles[0]
-        # q2 = self._q2_reference - joint_angles[1]
-        # q3 = self._q3_reference - joint_angles[2]
 
         joint_velocities = msg.velocity
         e1 = self._q1_dot_reference - joint_velocities[0]

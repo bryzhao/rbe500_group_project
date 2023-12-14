@@ -83,14 +83,62 @@ CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazeb
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c.s
 
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/flags.make
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o: rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o -MF CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o.d -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o -c /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c > CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.i
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.s
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/flags.make
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o: rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o -MF CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o.d -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o -c /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c > CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.i
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.s
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/flags.make
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o: rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o -MF CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o.d -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o -c /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c > CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.i
+
+CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c -o CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.s
+
 # Object files for target rrbot_gazebo__rosidl_generator_py
 rrbot_gazebo__rosidl_generator_py_OBJECTS = \
-"CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c.o"
+"CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c.o" \
+"CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o" \
+"CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o" \
+"CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o"
 
 # External object files for target rrbot_gazebo__rosidl_generator_py
 rrbot_gazebo__rosidl_generator_py_EXTERNAL_OBJECTS =
 
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_ik_service_s.c.o
+rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_control_input_s.c.o
+rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_cartesian_velocity_input_s.c.o
+rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/rosidl_generator_py/rrbot_gazebo/srv/_joint_velocity_input_s.c.o
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/build.make
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: librrbot_gazebo__rosidl_typesupport_c.so
@@ -108,7 +156,7 @@ rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: /opt/r
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so: CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library rosidl_generator_py/rrbot_gazebo/librrbot_gazebo__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rrbot_gazebo__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

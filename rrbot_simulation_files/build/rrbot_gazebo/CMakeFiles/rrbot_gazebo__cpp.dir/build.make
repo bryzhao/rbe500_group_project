@@ -70,6 +70,18 @@ CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.h
 CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__builder.hpp
 CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__struct.hpp
 CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__traits.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/control_input.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__builder.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__struct.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__traits.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/cartesian_velocity_input.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__builder.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__struct.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__traits.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/joint_velocity_input.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__builder.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__struct.hpp
+CMakeFiles/rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__traits.hpp
 
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -87,6 +99,9 @@ rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/share/rosi
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: rosidl_adapter/rrbot_gazebo/srv/IKService.idl
+rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: rosidl_adapter/rrbot_gazebo/srv/ControlInput.idl
+rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: rosidl_adapter/rrbot_gazebo/srv/CartesianVelocityInput.idl
+rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: rosidl_adapter/rrbot_gazebo/srv/JointVelocityInput.idl
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -160,11 +175,59 @@ rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__struct.hpp: rosidl_gene
 rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__traits.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__traits.hpp
 
+rosidl_generator_cpp/rrbot_gazebo/srv/control_input.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/control_input.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__builder.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__builder.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__struct.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__struct.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__traits.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__traits.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/cartesian_velocity_input.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/cartesian_velocity_input.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__builder.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__builder.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__struct.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__struct.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__traits.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__traits.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/joint_velocity_input.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/joint_velocity_input.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__builder.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__builder.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__struct.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__struct.hpp
+
+rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__traits.hpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__traits.hpp
+
 rrbot_gazebo__cpp: CMakeFiles/rrbot_gazebo__cpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/cartesian_velocity_input.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/control_input.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__builder.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__struct.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/cartesian_velocity_input__traits.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__builder.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__struct.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/control_input__traits.hpp
 rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__builder.hpp
 rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__struct.hpp
 rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/ik_service__traits.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__builder.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__struct.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/detail/joint_velocity_input__traits.hpp
 rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/ik_service.hpp
+rrbot_gazebo__cpp: rosidl_generator_cpp/rrbot_gazebo/srv/joint_velocity_input.hpp
 rrbot_gazebo__cpp: CMakeFiles/rrbot_gazebo__cpp.dir/build.make
 .PHONY : rrbot_gazebo__cpp
 

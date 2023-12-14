@@ -69,6 +69,15 @@ include CMakeFiles/rrbot_gazebo.dir/progress.make
 CMakeFiles/rrbot_gazebo: /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/IKService.srv
 CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/IKService_Request.msg
 CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/IKService_Response.msg
+CMakeFiles/rrbot_gazebo: /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/ControlInput.srv
+CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/ControlInput_Request.msg
+CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/ControlInput_Response.msg
+CMakeFiles/rrbot_gazebo: /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/CartesianVelocityInput.srv
+CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/CartesianVelocityInput_Request.msg
+CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/CartesianVelocityInput_Response.msg
+CMakeFiles/rrbot_gazebo: /home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/JointVelocityInput.srv
+CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/JointVelocityInput_Request.msg
+CMakeFiles/rrbot_gazebo: rosidl_cmake/srv/JointVelocityInput_Response.msg
 CMakeFiles/rrbot_gazebo: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/rrbot_gazebo: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/rrbot_gazebo: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

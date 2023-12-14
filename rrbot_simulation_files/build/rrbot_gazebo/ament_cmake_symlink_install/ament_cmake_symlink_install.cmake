@@ -322,8 +322,8 @@ ament_cmake_symlink_install_directory("/home/joshfarina/ros2_ws/src/rbe500_group
 # install(DIRECTORY "config" "DESTINATION" "share/rrbot_gazebo")
 ament_cmake_symlink_install_directory("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" DIRECTORY "config" "DESTINATION" "share/rrbot_gazebo")
 
-# install(PROGRAMS "forward_kinematics_node.py" "inverse_kinematics_node.py" "DESTINATION" "lib/rrbot_gazebo")
-ament_cmake_symlink_install_programs("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src" PROGRAMS "forward_kinematics_node.py" "inverse_kinematics_node.py" "DESTINATION" "lib/rrbot_gazebo")
+# install(PROGRAMS "forward_kinematics_node.py" "inverse_kinematics_node.py" "joint_effort_control_node.py" "joint_velocity_control_node.py" "DESTINATION" "lib/rrbot_gazebo")
+ament_cmake_symlink_install_programs("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/python_src" PROGRAMS "forward_kinematics_node.py" "inverse_kinematics_node.py" "joint_effort_control_node.py" "joint_velocity_control_node.py" "DESTINATION" "lib/rrbot_gazebo")
 
 # install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/rrbot_gazebo" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/rrbot_gazebo" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
@@ -376,6 +376,15 @@ include("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_file
 # install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/IKService.idl" "DESTINATION" "share/rrbot_gazebo/srv")
 ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/IKService.idl" "DESTINATION" "share/rrbot_gazebo/srv")
 
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/ControlInput.idl" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/ControlInput.idl" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/CartesianVelocityInput.idl" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/CartesianVelocityInput.idl" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/JointVelocityInput.idl" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_adapter/rrbot_gazebo/srv/JointVelocityInput.idl" "DESTINATION" "share/rrbot_gazebo/srv")
+
 # install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/IKService.srv" "DESTINATION" "share/rrbot_gazebo/srv")
 ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/IKService.srv" "DESTINATION" "share/rrbot_gazebo/srv")
 
@@ -384,6 +393,33 @@ ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_pro
 
 # install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/IKService_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
 ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/IKService_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/ControlInput.srv" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/ControlInput.srv" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/ControlInput_Request.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/ControlInput_Request.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/ControlInput_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/ControlInput_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/CartesianVelocityInput.srv" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/CartesianVelocityInput.srv" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/CartesianVelocityInput_Request.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/CartesianVelocityInput_Request.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/CartesianVelocityInput_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/CartesianVelocityInput_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/JointVelocityInput.srv" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo/srv/JointVelocityInput.srv" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/JointVelocityInput_Request.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/JointVelocityInput_Request.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+
+# install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/JointVelocityInput_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
+ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/rosidl_cmake/srv/JointVelocityInput_Response.msg" "DESTINATION" "share/rrbot_gazebo/srv")
 
 # install(FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rrbot_gazebo" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/rrbot_gazebo" FILES "/home/joshfarina/ros2_ws/src/rbe500_group_project/rrbot_simulation_files/build/rrbot_gazebo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rrbot_gazebo" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
