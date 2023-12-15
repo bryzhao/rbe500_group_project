@@ -16,6 +16,8 @@ Service calls:
                                                                                     input_y_dot: 0.0,
                                                                                     input_z_dot: 0.0}"
 """
+import math
+import time
 
 import numpy as np
 import rclpy
@@ -27,10 +29,6 @@ from sensor_msgs.msg import JointState
 from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 
 # Globals / tunable gains for PI controller
-
-# TODO (Rutvij): Tune the controller by actuating one joint at a time and keeping the
-#  2 others fixed (probably in the URDF file, this was called out in the assignment I think),
-#  tuning one set of gains, and then moving onto the next joint.
 
 Kp1 = 40
 Ki1 = 0.01
@@ -45,13 +43,27 @@ l1 = 1  # Length of link1
 l2 = 1  # Length of link2
 l3 = 1  # Length of link3
 
+# Global variable to store the last time the flag was set
+last_time_flag_set = 0
+
 np.set_printoptions(precision=3, suppress=True)
+
+
+def can_set_flag():
+    global last_time_flag_set
+    current_time = time.time()
+    if current_time - last_time_flag_set > 10:
+        last_time_flag_set = current_time
+        return True
+    else:
+        return False
 
 
 class JointVelocityController(Node):
     """
     Simple joint velocity controller for controlling our SCARA robot in Gazebo.
     """
+
     def __init__(self):
         super().__init__('joint_velocity_control_node')
 
@@ -71,6 +83,8 @@ class JointVelocityController(Node):
         self._q1_dot_reference = 0.0
         self._q2_dot_reference = 0.0
         self._q3_dot_reference = 0.0
+
+        self.cart_velocities = np.array([0, 0, 0])
 
         # Store our last measured joint velocities, so we can estimate joint accelerations later
         self._last_q1_dot = 0.0
@@ -139,9 +153,9 @@ class JointVelocityController(Node):
 
         self.get_logger().info(f"Request received: {request}.")
 
-        cart_velocities = np.array([request.input_x_dot, request.input_y_dot,
-                                    request.input_z_dot])
-        q_dot_reference = self.compute_joint_velocities_from_cart_velocity(cartesian_velocities=cart_velocities)
+        self.cart_velocities = np.array([request.input_x_dot, request.input_y_dot,
+                                         request.input_z_dot])
+        q_dot_reference = self.compute_joint_velocities_from_cart_velocity(cartesian_velocities=self.cart_velocities)
 
         self._q1_dot_reference = q_dot_reference[0]
         self._q2_dot_reference = q_dot_reference[1]
@@ -151,6 +165,11 @@ class JointVelocityController(Node):
         response.status = True
         return response
 
+    @staticmethod
+    def wrap_angle(angle):
+        """Wrap the angle to the range [0, 2*pi)."""
+        return angle % (2 * math.pi)
+
     def gazebo_listener_callback(self, msg: JointState) -> None:
         """
         This is the callback that is executed every time we receive a message of JointState on the
@@ -158,50 +177,63 @@ class JointVelocityController(Node):
         :param msg: ROS2 message of type JointState
         :return: None
         """
+        global last_time_flag_set
 
         # Retrieves a float array of q1, q2, q3
         if len(msg.position) != 3:
-           print("[WARNING] Callback needs to accept 3 joint angles only.")
+            print("[WARNING] Callback needs to accept 3 joint angles only.")
 
         # Parse out joint angles and velocities
         joint_angles = msg.position
 
+        if can_set_flag():
+            wrapped_angle = self.wrap_angle(joint_angles[1])
+            if 0.15 >= wrapped_angle >= -0.15 or 3.0 >= wrapped_angle <= 3.14:
+                print("SWAPPING DIRECTION OF EEF")
+                self.cart_velocities[1] *= -1
+
         # Compute and then store jacobian internally
         self._compute_jacobian_from_joint_positions(joint_angles)
 
+        # Update reference joint velocities
+        q_dot_reference = self.compute_joint_velocities_from_cart_velocity(cartesian_velocities=self.cart_velocities)
+
+        self._q1_dot_reference = q_dot_reference[0]
+        self._q2_dot_reference = q_dot_reference[1]
+        self._q3_dot_reference = q_dot_reference[2]
 
         joint_velocities = msg.velocity
         e1 = self._q1_dot_reference - joint_velocities[0]
         e2 = self._q2_dot_reference - joint_velocities[1]
         e3 = self._q3_dot_reference - joint_velocities[2]
 
-        dt = 0.01  # 100 [Hz] for cycle time in simulation
+        # dt = 0.01  # 100 [Hz] for cycle time in simulation
 
         # sums error every time step, Might enable integral windup
-        self.e1_integral += e1 * dt
-        self.e2_integral += e2 * dt
-        self.e3_integral += e3 * dt
-        """
-        if (self.e1_integral < 0.02):
-            self.e1_integral = 0.02
-        else:
-            exit
-        
-        if (self.e2_integral < 0.02):
-            self.e2_integral = 0.02
-        else:
-            exit
-        
-        if (self.e3_integral < 0.02):
-            self.e3_integral = 0.02
-        else:
-            exit
-        """
+        self.e1_integral += e1 * 0.01
+        self.e2_integral += e2 * 0.01
+        self.e3_integral += e3 * 0.01
+
+        if self.e1_integral >= 0.1:
+            self.e1_integral = 0.1
+        if self.e1_integral <= -0.1:
+            self.e1_integral = -0.1
+
+        if self.e2_integral > 0.1:
+            self.e2_integral = 0.1
+        if self.e2_integral <= -0.1:
+            self.e2_integral = -0.1
+
+        if self.e3_integral > 0.1:
+            self.e3_integral = 0.1
+        if self.e3_integral <= -0.1:
+            self.e3_integral = -0.1
+
         # With leaky integrator: lowers integral at a constant rate to prevent integral windup
-        leak_constant = 0.6
-        self.e1_integral = self.e1_integral * (1 - leak_constant) + e1 * dt
-        self.e2_integral = self.e2_integral * (1 - leak_constant) + e2 * dt
-        self.e3_integral = self.e3_integral * (1 - leak_constant) + e3 * dt
+        # leak_constant = 0.6
+        # self.e1_integral = self.e1_integral * (1 - leak_constant) + e1
+        # self.e2_integral = self.e2_integral * (1 - leak_constant) + e2
+        # self.e3_integral = self.e3_integral * (1 - leak_constant) + e3
 
         # View integral windup
         print("J1 Integral")
