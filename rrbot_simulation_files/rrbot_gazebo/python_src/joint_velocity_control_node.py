@@ -32,10 +32,10 @@ from rrbot_gazebo.srv import CartesianVelocityInput, JointVelocityInput
 #  2 others fixed (probably in the URDF file, this was called out in the assignment I think),
 #  tuning one set of gains, and then moving onto the next joint.
 
-Kp1 = 30
+Kp1 = 40
 Ki1 = 0.01
 
-Kp2 = 10.0
+Kp2 = 15.0
 Ki2 = 0.01
 
 Kp3 = 7.0
@@ -52,7 +52,6 @@ class JointVelocityController(Node):
     """
     Simple joint velocity controller for controlling our SCARA robot in Gazebo.
     """
-
     def __init__(self):
         super().__init__('joint_velocity_control_node')
 
@@ -182,7 +181,7 @@ class JointVelocityController(Node):
         self.e1_integral += e1 * dt
         self.e2_integral += e2 * dt
         self.e3_integral += e3 * dt
-
+        """
         if (self.e1_integral < 0.02):
             self.e1_integral = 0.02
         else:
@@ -197,22 +196,20 @@ class JointVelocityController(Node):
             self.e3_integral = 0.02
         else:
             exit
-
+        """
         # With leaky integrator: lowers integral at a constant rate to prevent integral windup
+        leak_constant = 0.6
+        self.e1_integral = self.e1_integral * (1 - leak_constant) + e1 * dt
+        self.e2_integral = self.e2_integral * (1 - leak_constant) + e2 * dt
+        self.e3_integral = self.e3_integral * (1 - leak_constant) + e3 * dt
 
-        leak_constant = 0.8
-        self.e1_integral = self.e1_integral * leak_constant + e1 * dt
-        self.e2_integral = self.e2_integral * leak_constant + e2 * dt
-        self.e3_integral = self.e3_integral * leak_constant + e3 * dt
-
+        # View integral windup
         print("J1 Integral")
         print(self.e1_integral)
         print("J2 Integral")
         print(self.e2_integral)
         print("J3 Integral")
         print(self.e3_integral)
-
-
 
         # Compute control inputs, e.g. efforts to the actuators. We're only using a PI controller for now.
         u1 = Kp1 * e1 + Ki1 * self.e1_integral
